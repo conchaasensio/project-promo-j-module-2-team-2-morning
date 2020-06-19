@@ -1,6 +1,37 @@
 // fonts
 $font-main: "Roboto", sans-serif;
+/* font-family: 'Merriweather', serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Open Sans', sans-serif; */
 
-// colors
-$color-white: #f3f4f5;
-$color-secondary: #999;
+//COLORS
+$black: #000000;
+$white: #d5d5d5;
+
+$light-khaki: #f9f4dc;
+$pale-grey: #dde9ed;
+$black-20: rgba(0, 0, 0, 0.2);
+
+$color-line: #d8d8d8; //color linea bordes formulario
+$color-twitter: #00a0f5;
+$color-secondary: #e17334; //botones e iconos
+
+//---text
+$color-text-primary: #54585a; //title text
+$color-text-light: #c5c5c5; //placeholder
+$color-text-copy: #6b6b6b; //copy
+
+//---palette 1
+$color-p1-primary-dark: #114e4e;
+$color-p1-primary: #438792;
+$color-p1-primary-light: #a2deaf;
+
+//---palette 2
+$color-p2-primary-dark: #420101;
+$color-p2-primary: #e95626;
+$color-p2-primary-light: #bd1010;
+
+//---palette 3
+$color-p3-primary-dark: #3e5b65;
+$color-p3-primary: #eab052;
+$color-p3-primary-light: #a0c0cf;
