@@ -1,5 +1,6 @@
 body {
   font-size: 16px;
+  font-family: "Open Sans", sans-serif;
 }
 * {
   margin: 0;
@@ -17,69 +18,85 @@ body {
   padding-bottom: 10px;
   width: 281px;
   margin: auto;
-  border-bottom: 1px solid #d8d8d8;
-}
-.fillOut__title {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 18px;
-}
-.fa-keyboard-o {
-  color: #e17334;
-  margin-right: 10px;
-}
-.fa-chevron-down {
-  color: #54585a;
-}
-.item {
-  margin-bottom: 20px;
-}
+  border-bottom: 1px solid $color-line;
 
-.fillOut__form {
-  font-size: 14px;
-  width: 100%;
-}
-.fillOut-image {
-  display: flex;
-  flex-direction: row;
-  justify-content: left;
-  align-items: center;
-}
+  &__title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    color: $color-text-primary;
+    h2 {
+      text-transform: uppercase;
+    }
+    .fa-keyboard-o {
+      color: $color-secondary;
+      margin-right: 10px;
+    }
+    .fa-chevron-down {
+      color: $color-text-primary;
+    }
+  }
 
-.fillOut-image .textImage {
-  width: 30px;
-  height: 30px;
-  display: inline-block;
-  margin-left: 20px;
-}
-.fillOut-image .fillOut-button {
-  background-color: #e17334;
-  color: white;
-  border: #e17334;
-  width: 140px;
-  height: 30px;
-  border-radius: 3px;
-}
+  &__form {
+    font-size: 14px;
+    width: 100%;
 
-.fillOut__form input {
-  display: block;
-  border: 1px solid #a2deaf;
-  color: #c5c5c5;
-  width: 100%;
-}
-input:focus,
-textarea:focus {
-  border-color: #e17334;
-  box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075) inset, 0 0 8px #e17334;
-  outline: 0 none;
-}
-input::placeholder {
-  color: #c5c5c5;
-}
-label {
-  color: #114e4e;
+    .item {
+      margin-bottom: 20px;
+    }
+
+    .fillOut-image {
+      display: flex;
+      flex-direction: row;
+      justify-content: left;
+      align-items: center;
+
+      .textImage {
+        width: 30px;
+        height: 30px;
+        display: inline-block;
+        margin-left: 20px;
+      }
+      .fillOut-button {
+        background-color: $color-secondary;
+        color: white;
+        border: $color-secondary;
+        width: 140px;
+        height: 30px;
+        border-radius: 3px;
+        cursor: pointer;
+        transition: background-color 1s ease;
+        box-shadow: none;
+        &:hover {
+          background-color: $color-p1-primary-dark;
+        }
+        &:focus {
+          border: 2px solid $color-secondary;
+        }
+      }
+    }
+    input {
+      display: block;
+      border: 1px solid $color-p1-primary-light;
+      color: $color-text-light;
+      width: 100%;
+      padding: 4px 9px;
+    }
+  }
+  input:focus,
+  textarea:focus {
+    border-color: $color-secondary;
+    box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075) inset, 0 0 8px #e17334;
+    outline: 0 none;
+  }
+  input::placeholder {
+    color: $color-text-light;
+  }
+  label {
+    color: $color-p1-primary-dark;
+  }
 }
 
 @media all and (min-width: 768px) {
