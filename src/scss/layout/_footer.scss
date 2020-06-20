@@ -3,4 +3,25 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border-top: 1px solid $color-line;
+  width: 100%;
+  height: 110px;
+  padding: 18px 61px 20px 61px;
+
+  &__copy {
+    // font-family: ; Incluir variable y cargar fuentes a index.html.
+    font-size: 14px; //Incluir font-size 16px en reset para poder pasar el resto a rem.
+    line-height: 20px; //Igual que font-size, pasar a rem.
+    color: $color-text-copy;
+    margin-bottom: 12px;
+
+    &__logo {
+      width: 103px;
+      height: 40px;
+
+      &--img {
+        width: 100%;
+      }
+    }
+  }
 }
