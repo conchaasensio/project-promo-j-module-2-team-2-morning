@@ -1,0 +1,120 @@
+.wrapper-landing {
+  padding: 0 35px;
+  @media all and (min-width: 768px) {
+    padding: 0 40px;
+  }
+}
+
+.main-landing {
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-top: 95px;
+  @media all and (min-width: 768px) {
+    padding-top: 350px;
+  }
+
+  & img {
+    width: 250px;
+    @media all and (min-width: 768px) {
+      width: 419px;
+    }
+  }
+
+  & h1 {
+    font-family: $font-title-landing;
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: $color-secondary;
+    padding-top: 35.4px;
+    @media all and (min-width: 768px) {
+      font-size: 1.5rem;
+      padding-top: 31px;
+    }
+  }
+  & p {
+    font-family: $font-main-landing;
+    font-size: 0.8rem;
+    color: $color-p1-primary-dark;
+    @media all and (min-width: 768px) {
+      font-size: 1rem;
+    }
+  }
+}
+
+.steps-landing {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-top: 17.8px;
+  border: solid 1.6px $color-secondary;
+  border-radius: 4px;
+  width: 268px;
+  height: 73.8px;
+  // opacity: 0.21;
+  @media all and (min-width: 768px) {
+    padding-top: 27px;
+  }
+  & div {
+    display: inline-block;
+    padding: 15px 20px 10px 20px;
+  }
+  & .icon-landing {
+    font-size: 1.4rem;
+    color: $color-secondary;
+    @media all and (min-width: 768px) {
+      font-size: 1.75rem;
+    }
+  }
+  & .text-landing {
+    font-size: 0.8rem;
+    color: $color-text-primary;
+    @media all and (min-width: 768px) {
+      font-size: 1rem;
+    }
+  }
+}
+
+.button-start {
+  font-size: 1rem;
+  color: $color-light-landing;
+  background-color: $color-p1-primary;
+  border-radius: 21px;
+  padding: 10px;
+  text-align: center;
+  width: 129px;
+  height: 42px;
+  margin-bottom: 30px;
+  margin-top: 38.6px;
+  @media all and (min-width: 768px) {
+    margin-top: 186px;
+    margin-bottom: 59px;
+  }
+}
+
+.footer-landing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 0.875rem;
+  color: $color-text-copy;
+  background-color: $color-light-landing;
+  @media all and (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  & span {
+    padding-top: 18px;
+  }
+  & image {
+    width: 103px;
+    height: 40px;
+    padding-top: 12px;
+    padding-bottom: 20px;
+  }
+}
