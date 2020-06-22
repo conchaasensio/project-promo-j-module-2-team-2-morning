@@ -1,2 +1,16 @@
-.page__header {
+.header {
+  display: inline-block;
+  width: 100%;
+  height: 111px;
+  text-align: left;
+
+  &__logo {
+    width: 201px;
+    height: 50px;
+    margin: 31px 0 30px 40px;
+
+    &--img {
+      width: 100%;
+    }
+  }
 }
