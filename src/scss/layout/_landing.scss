@@ -94,3 +94,27 @@
     margin-bottom: 59px;
   }
 }
+
+.footer-landing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 0.875rem;
+  color: $color-text-copy;
+  background-color: $color-light-landing;
+  @media all and (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  & span {
+    padding-top: 18px;
+  }
+  & image {
+    width: 103px;
+    height: 40px;
+    padding-top: 12px;
+    padding-bottom: 20px;
+  }
+}
