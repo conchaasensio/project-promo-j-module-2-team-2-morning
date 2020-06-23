@@ -3,25 +3,18 @@
   width: 100%;
   background: #dde9ed;
   padding: 40px 45px;
-}
-
-.preview__container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  margin: auto;
 }
 
 .button__reset {
-  width: 75px;
-  height: 30px;
   padding: 6px 10px;
   border: 1px solid #fff;
   border-radius: 22.5px;
   font-family: "Open Sans", sans-serif;
-  font-size: 12px;
+  font-size: 20px;
   color: #54585a;
-  text-transform: uppercase;
-  margin-bottom: 20px;
+  text-transform: none;
+  margin: auto;
 }
 
 .preview__card {
