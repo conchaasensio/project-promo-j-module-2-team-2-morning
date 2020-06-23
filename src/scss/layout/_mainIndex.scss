@@ -24,10 +24,10 @@
   }
 
   & h1 {
-    font-family: $font-title-landing;
+    font-family: $font-secondary;
     font-size: 1.2rem;
     font-weight: 900;
-    color: $color-secondary;
+    color: $color-primary;
     padding-top: 35.4px;
     @media all and (min-width: 768px) {
       font-size: 1.5rem;
@@ -35,7 +35,7 @@
     }
   }
   & p {
-    font-family: $font-main-landing;
+    font-family: $font-primary;
     font-size: 0.8rem;
     color: $color-p1-primary-dark;
     @media all and (min-width: 768px) {
@@ -50,7 +50,7 @@
   align-items: center;
   justify-content: space-evenly;
   padding-top: 17.8px;
-  border: solid 1.6px $color-secondary;
+  border: solid 1.6px $color-primary;
   border-radius: 4px;
   width: 268px;
   height: 73.8px;
@@ -64,7 +64,7 @@
   }
   & .icon-landing {
     font-size: 1.4rem;
-    color: $color-secondary;
+    color: $color-primary;
     @media all and (min-width: 768px) {
       font-size: 1.75rem;
     }
@@ -80,7 +80,7 @@
 
 .button-start {
   font-size: 1rem;
-  color: $color-light-landing;
+  color: $color-light;
   background-color: $color-p1-primary;
   border-radius: 21px;
   padding: 10px;
