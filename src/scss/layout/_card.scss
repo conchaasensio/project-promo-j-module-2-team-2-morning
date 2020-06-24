@@ -65,7 +65,7 @@
 .card__photo {
   width: 240px;
   height: 200px;
-  background-size: cover;
+  object-fit: cover;
 }
 
 .social__links {
