@@ -358,3 +358,8 @@ html {
   font-size: 16px;
   font-family: $font-primary;
 }
+
+.wrapper{
+  max-width: $desktop;
+  margin: auto;
+}

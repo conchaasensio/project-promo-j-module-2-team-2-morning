@@ -1,9 +1,16 @@
 .main {
     @media all and (min-width: 768px){
-        display: flex;
-        flex-direction: row-reverse;
-        padding: 20px 40px 20px 0px;
         background-color: #f5f5f5;
+        .wrapper {
+            margin: auto;
+            justify-content: center;
+            display: flex;
+            flex-direction: row-reverse;
+            padding: 20px 40px 20px 0px;
+        }
+
+
+
     }
 }
 

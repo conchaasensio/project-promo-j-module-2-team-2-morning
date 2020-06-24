@@ -1,6 +1,18 @@
+.section__card{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-image: linear-gradient(#bfcdd0, #dde9ed);
+
+  @include tablet {
+    padding-top: 0px;
+    padding-bottom: 50px;
+  }
+}
+
 /* Card preview */
 .preview__section {
-  background-image: linear-gradient(#bfcdd0, #dde9ed);
   padding: 40px 45px;
 }
 
