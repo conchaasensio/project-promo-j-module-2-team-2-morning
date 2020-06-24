@@ -1,3 +1,6 @@
-.vista {
-    height: 100vh;
+.page__index {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
