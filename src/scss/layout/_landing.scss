@@ -45,11 +45,9 @@
 }
 
 .steps-landing {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-evenly;
-  padding-top: 17.8px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 17.8px;
   border: solid 1.6px $color-secondary;
   border-radius: 4px;
   width: 268px;
