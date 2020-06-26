@@ -24,11 +24,13 @@ const checkPalette1 = document.querySelector('.js-check1');
 const checkPalette2 = document.querySelector('.js-check2');
 const checkPalette3 = document.querySelector('.js-check3');
 
+
 //Datos Formulario
 
 //Objeto para crear los datos del formulario
 const formData = {};
 
+//Objeto que tiene todas las clases de la card para poder pintarlas
 const cardFields = {
     fullname: document.querySelector('.js-text-name'),
     job: document.querySelector('.js-text-job'),
@@ -38,7 +40,7 @@ const cardFields = {
     github: document.querySelector('.js-github')
 }
 
-//Variables form
+//Variables con input del form
 const inputName = document.querySelector('.js-input-name'); 
 const inputJob = document.querySelector('.js-input-job');
 const inputEmail = document.querySelector('.js-input-mail');
