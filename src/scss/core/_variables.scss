@@ -1,23 +1,14 @@
 // fonts
-$font-main: 'Roboto', sans-serif;
-$font-main-landing: 'Open Sans', sans-serif;
-$font-title-landing: 'Merriweather', serif;
-$font-cards-general: 'Montserrat', sans-serif;
+$font-primary: 'Open Sans', sans-serif;
+$font-secondary: 'Merriweather', serif;
+$font-tertiary: 'Montserrat', sans-serif;
 
 //COLORS
-$black: #000000;
-$white: #d5d5d5;
-
-$color-background-landing: #f5f5f5;
-$color-light-landing: #ffffff;
-
-$light-khaki: #f9f4dc;
-$pale-grey: #dde9ed;
-$black-20: rgba(0, 0, 0, 0.2);
+$color-dark: #000000;
+$color-light: #ffffff;
 
 $color-line: #d8d8d8; //color linea bordes formulario
-$color-twitter: #00a0f5;
-$color-secondary: #e17334; //botones e iconos
+$color-primary: rgb(225, 115, 52); //botones e iconos
 
 //---text
 $color-text-primary: #54585a; //title text

@@ -37,11 +37,6 @@ main {
  * `article` contexts in Chrome, Firefox, and Safari.
  */
 
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
-
 /* Grouping content
    ========================================================================== */
 
@@ -361,5 +356,10 @@ template {
 
 html {
   font-size: 16px;
-  font-family: $font-main-landing;
+  font-family: $font-primary;
+}
+
+.wrapper{
+  max-width: $desktop;
+  margin: auto;
 }

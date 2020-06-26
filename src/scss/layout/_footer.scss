@@ -8,20 +8,21 @@
   height: 110px;
   padding: 18px 61px 20px 61px;
 
+
   &__copy {
-    // font-family: ; Incluir variable y cargar fuentes a index.html.
-    font-size: 14px; //Incluir font-size 16px en reset para poder pasar el resto a rem.
-    line-height: 20px; //Igual que font-size, pasar a rem.
+    font-family: $font-primary;
+    font-size: 0.87rem;
+    line-height: 1.25rem;
     color: $color-text-copy;
     margin-bottom: 12px;
+  }
 
-    &__logo {
-      width: 103px;
-      height: 40px;
+  &__logo {
+    width: 103px;
+    height: 40px;
 
-      &--img {
-        width: 100%;
-      }
+    &--img {
+      width: 100%;
     }
   }
 
@@ -30,5 +31,17 @@
     flex-direction: row;
     justify-content: space-between;
     padding: 0;
+
+    .footer__copy {
+      margin-top: 18px;
+      margin-left: 41px;
+      margin-bottom: 22px;
+    }
+
+    .footer__logo {
+      margin-top: 10px;
+      margin-right: 40px;
+      margin-bottom: 10px;
+    }
   }
 }

@@ -14,19 +14,26 @@
   </head>
   <body>
     <header>
-      <include src="./partials/cards/header.html"></include>
+      <div class="wrapper">
+        <include src="./partials/cards/header.html"></include>
+      </div>
     </header>
-    <main>
-      <section>
-        <include src="./partials/cards/card.html"></include>
-      </section>
-      <section>
-          <include src="./partials/cards/form.html"></include>
-        </form>
-      </section>
+    <main class="main">
+      <div class="wrapper">
+        <section class="section__card">
+          <include src="./partials/cards/card.html"></include>
+        </section>
+        <section>
+            <include src="./partials/cards/form.html"></include>
+          </form>
+        </section>
+      </div>
     </main>
     <footer>
+      <div class="wrapper">
       <include src="./partials/footer.html"></include>
+      </div>
     </footer>
+    <script src="./assets/js/main.js"></script>
   </body>
 </html>

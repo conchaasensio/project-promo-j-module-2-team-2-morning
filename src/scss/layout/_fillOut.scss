@@ -26,7 +26,7 @@ body {
       text-transform: uppercase;
     }
     .fa-keyboard-o {
-      color: $color-secondary;
+      color: $color-primary;
       margin-right: 10px;
     }
     .fa-chevron-down {
@@ -55,9 +55,9 @@ body {
         margin-left: 20px;
       }
       .fillOut-button {
-        background-color: $color-secondary;
+        background-color: $color-primary;
         color: white;
-        border: $color-secondary;
+        border: $color-primary;
         width: 140px;
         height: 30px;
         border-radius: 3px;
@@ -68,7 +68,7 @@ body {
           background-color: $color-p1-primary-dark;
         }
         &:focus {
-          border: 2px solid $color-secondary;
+          border: 2px solid $color-primary;
         }
       }
     }
@@ -82,7 +82,7 @@ body {
   }
   input:focus,
   textarea:focus {
-    border-color: $color-secondary;
+    border-color: $color-primary;
     box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075) inset, 0 0 8px #e17334;
     outline: 0 none;
   }

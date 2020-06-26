@@ -1,3 +1,4 @@
+
 .wrapper-landing {
   padding: 0 35px;
   @media all and (min-width: 768px) {
@@ -7,6 +8,7 @@
 
 .main-landing {
   background-color: #f5f5f5;
+  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,47 +26,51 @@
   }
 
   & h1 {
-    font-family: $font-title-landing;
+    font-family: $font-secondary;
     font-size: 1.2rem;
     font-weight: 900;
-    color: $color-secondary;
+    color: $color-primary;
     padding-top: 35.4px;
+    line-height: normal;
+
     @media all and (min-width: 768px) {
       font-size: 1.5rem;
       padding-top: 31px;
     }
   }
   & p {
-    font-family: $font-main-landing;
+    font-family: $font-primary;
     font-size: 0.8rem;
+    line-height: normal;
     color: $color-p1-primary-dark;
+    width: 268px;
     @media all and (min-width: 768px) {
       font-size: 1rem;
+      width: 331px;
     }
   }
 }
 
 .steps-landing {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-evenly;
-  padding-top: 17.8px;
-  border: solid 1.6px $color-secondary;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: solid 1.6px rgba(225, 115, 52, 0.21);
   border-radius: 4px;
   width: 268px;
   height: 73.8px;
-  // opacity: 0.21;
+  margin-top: 17.8px;
   @media all and (min-width: 768px) {
-    padding-top: 27px;
+    width: 325px;
+    height: 86px;
   }
   & div {
-    display: inline-block;
-    padding: 15px 20px 10px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
   & .icon-landing {
     font-size: 1.4rem;
-    color: $color-secondary;
+    color: $color-primary;
     @media all and (min-width: 768px) {
       font-size: 1.75rem;
     }
@@ -80,7 +86,7 @@
 
 .button-start {
   font-size: 1rem;
-  color: $color-light-landing;
+  color: $color-light;
   background-color: $color-p1-primary;
   border-radius: 21px;
   padding: 10px;
@@ -89,6 +95,8 @@
   height: 42px;
   margin-bottom: 30px;
   margin-top: 38.6px;
+  line-height: normal;
+
   @media all and (min-width: 768px) {
     margin-top: 186px;
     margin-bottom: 59px;
