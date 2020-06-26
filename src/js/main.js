@@ -1,7 +1,5 @@
 'use strict'
 
-console.log('>> Ready :)');
-console.log('hola');
 /* VARIABLES */
 
 //Pasar a CSS creando una clase con los colores de cada paleta
@@ -19,7 +17,6 @@ const palette1 = document.querySelector('.js-palette1');
 const palette2 = document.querySelector('.js-palette2');
 const palette3 = document.querySelector('.js-palette3');
 
-console.log(palette1);
 
 //FORMULARIO
 //Check Paleta de colores
@@ -29,19 +26,19 @@ const checkPalette3 = document.querySelector('.js-check3');
 
 //Datos Formulario
 
+//Objeto para crear los datos del formulario
 const formData = {};
 
-//Variables Card
-const textName = document.querySelector('.js-text-name'); 
-const textJob = document.querySelector('.js-text-job');
-const linkEmail = document.querySelector('.js-mail');
-const numberPhone = document.querySelector('.js-number');
-const linkLinkedin = document.querySelector('.js-linkedin');
-const linkGithub = document.querySelector('.js-github');
-
+const cardFields = {
+    fullname: document.querySelector('.js-text-name'),
+    job: document.querySelector('.js-text-job'),
+    emailAddress: document.querySelector('.js-mail'),
+    telephone: document.querySelector('.js-number'),
+    linkedin: document.querySelector('.js-linkedin'),
+    github: document.querySelector('.js-github')
+}
 
 //Variables form
-
 const inputName = document.querySelector('.js-input-name'); 
 const inputJob = document.querySelector('.js-input-job');
 const inputEmail = document.querySelector('.js-input-mail');
@@ -50,8 +47,18 @@ const inputLinkedin = document.querySelector('.js-input-linkedin');
 const inputGithub = document.querySelector('.js-input-github');
 
 
+//Funcion que guarda los datos en el objeto y lo pinta en la tarjeta
+function setData(ev) {
+    const name = ev.currentTarget.name;
+    const inputValue = ev.currentTarget.value;
+    
+    formData[name] = inputValue;
+    cardFields[name].innerHTML = ev.currentTarget.value;
+}
 
 
-//Crear variables de los input. Recoger los datos
+//Funcion que valida los datos
 
-//
+//Listeners 
+inputName.addEventListener('keyup', setData);
+inputJob.addEventListener('keyup', setData);
