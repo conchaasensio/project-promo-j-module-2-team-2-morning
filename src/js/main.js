@@ -1,7 +1,7 @@
-'use strict';
+'use strict'
 
 console.log('>> Ready :)');
-
+console.log('hola');
 /* VARIABLES */
 
 //Pasar a CSS creando una clase con los colores de cada paleta
@@ -19,7 +19,7 @@ const palette1 = document.querySelector('.js-palette1');
 const palette2 = document.querySelector('.js-palette2');
 const palette3 = document.querySelector('.js-palette3');
 
-
+console.log(palette1);
 
 //FORMULARIO
 //Check Paleta de colores
@@ -30,5 +30,6 @@ const checkPalette3 = document.querySelector('.js-check3');
 //Datos Formulario
 
 const formData = {};
+
 
 
