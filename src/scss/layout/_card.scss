@@ -1,4 +1,4 @@
-.section__card{
+.section__card {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,11 +22,6 @@
   align-items: center;
 }
 
-.button__container {
-  margin-bottom: 20px;
-  transform: translate(-80px);
-}
-
 .button__reset {
   padding: 6px 12px 6px 21px;
   border: 1px solid #fff;
@@ -34,12 +29,21 @@
   font-family: $font-primary;
   text-transform: uppercase;
   font-size: 12px;
+  background-color: transparent;
   color: $color-text-primary;
-}
-
-.button__reset:hover {
-  background-color: $color-light;
-  color: $color-text-primary;
+  cursor: pointer;
+  margin-right: auto;
+  margin-bottom: 20px;
+  outline: none;
+  &:hover {
+    background-color: $color-light;
+    -webkit-transition: background-color 0.4s linear;
+    -moz-transition: background-color 0.4s linear;
+    -ms-transition: background-color 0.4s linear;
+    -o-transition: background-color 0.4s linear;
+    transition: background-color 0.4s linear;
+    color: $color-text-primary;
+  }
 }
 
 .fa-trash-alt {
