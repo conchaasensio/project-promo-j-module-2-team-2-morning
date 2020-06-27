@@ -4,12 +4,28 @@
         <i class="icon fas fa-share-alt"></i>
         <h3 class="titleMenu">comparte</h3>
       </div>
-      <i class="fas fa-angle-down"></i>
+      <i class="fa fa-chevron-down"></i>
     </div>
     <div class="share__content">
-        <button class="share__content__button">
+        <button type="submit" 
+        disabled="disabled" 
+        name="share" 
+        value="share" 
+        class="share__content__button js-share">
             <i class="far fa-address-card"></i>
             <span>CREAR TARJETA</span>
         </button>
     </div>  
+    <div class="text__share hidden">
+      <h5 class="text__share__create">La tarjeta ha sido creada:</h5>
+      <span class="text__share__link">https://awsome-profile-card.com?id=A456DF0001</span>
+      <button type="submit" 
+      name="twitter" 
+      value="twitter" 
+      class="text__share__button js-twitter">
+          <i class="fab fa-twitter"></i>
+          <span>Compartir en twitter</span>
+      </button>
+    </div> 
   </div>
+
