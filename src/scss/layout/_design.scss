@@ -1,120 +1,149 @@
-.box__design{
-    width: 320px;
-    margin-left: 20px;
-    margin-right: 20px;
-    border-bottom: 1px solid #d8d8d8;
+.box__design {
+  width: 320px;
+  margin-left: 20px;
+  margin-right: 20px;
+  border-bottom: 1px solid #d8d8d8;
 }
 
+.design__menu {
+  height: 41px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #54585a;
 
-.design__menu{
-height: 41px;
-display: flex;
-justify-content: space-between;
-align-items: center;
-color: #54585a;
-
-    & .content__title{
+  & .content__title {
     display: flex;
     justify-content: center;
     align-items: center;
-    
-        & .icon {
-        color: #e17334;
-        }
 
-        & .titleMenu {
-        text-transform: uppercase;
-        font-size: 18px;
-        padding-left: 10px;
-        }
-    
+    & .icon {
+      color: #e17334;
     }
+
+    & .titleMenu {
+      text-transform: uppercase;
+      font-size: 18px;
+      padding-left: 10px;
+    }
+  }
 }
 
 /* CONTENIDO FORM DESIGN */
-.design__content{
-    display: flex;
-    justify-content: space-between;
-    padding-left: 39px;
-    padding-right: 20px;
-    margin-top: 10px;
+.design__content {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 39px;
+  padding-right: 20px;
+  margin-top: 10px;
 
+  &__title {
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #54585a;
+  }
 
-    &__title{
-        text-transform: uppercase;
-        font-size: 14px;
-        color: #54585a;
+  &__form {
+    & .design__content__input {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
     }
-
-    &__form{
-
-        & .design__content__input{
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-    }
-
+  }
 }
 
 /* PALETA DE COLORES */
-.design__boxColor{
-    display: flex;
-    margin-left: 10px;
+.design__boxColor {
+  display: flex;
+  margin-left: 10px;
 
-    & .boxColor1{
-        background-color: #114e4e;
-        height: 25px;
-        width: 30px;
+  & .boxColor1 {
+    background-color: #114e4e;
+    height: 25px;
+    width: 30px;
+  }
+
+  & .boxColor2 {
+    background-color: #438792;
+    height: 25px;
+    width: 30px;
+  }
+
+  & .boxColor3 {
+    background-color: #a2deaf;
+    height: 25px;
+    width: 30px;
+  }
+
+  & .boxColor4 {
+    background-color: #420101;
+    height: 25px;
+    width: 30px;
+  }
+
+  & .boxColor5 {
+    background-color: #bd1010;
+    height: 25px;
+    width: 30px;
+  }
+
+  & .boxColor6 {
+    background-color: #e95626;
+    height: 25px;
+    width: 30px;
+  }
+
+  & .boxColor7 {
+    background-color: #3e5b65;
+    height: 25px;
+    width: 30px;
+  }
+
+  & .boxColor8 {
+    background-color: #eab052;
+    height: 25px;
+    width: 30px;
+  }
+
+  & .boxColor9 {
+    background-color: #a0c0cf;
+    height: 25px;
+    width: 30px;
+  }
+}
+
+.palette1 {
+  .title {
+    border-left-color: $color-p1-primary;
+    &__name {
+      color: $color-p1-primary-dark;
     }
+  }
+  .social__button {
+    border-color: $color-p1-primary-light;
+  }
+}
 
-    & .boxColor2{
-        background-color: #438792;
-        height: 25px;
-        width: 30px;
+.palette2 {
+  .title {
+    border-left-color: $color-p2-primary-light;
+    &__name {
+      color: $color-p2-primary-dark;
     }
+  }
+  .social__button {
+    border-color: $color-p2-primary;
+  }
+}
 
-    & .boxColor3{
-        background-color:#a2deaf;
-        height: 25px;
-        width: 30px;
+.palette3 {
+  .title {
+    border-left-color: $color-p3-primary;
+    &__name {
+      color: $color-p3-primary-dark;
     }
-
-    & .boxColor4{
-        background-color:#420101;
-        height: 25px;
-        width: 30px;
-    }
-
-    & .boxColor5{
-        background-color:#bd1010;
-        height: 25px;
-        width: 30px;
-    }
-
-    & .boxColor6{
-        background-color:#e95626;
-        height: 25px;
-        width: 30px;
-    }
-
-    & .boxColor7{
-        background-color: #3e5b65;
-        height: 25px;
-        width: 30px;
-    }
-
-    & .boxColor8{
-        background-color:#eab052;
-        height: 25px;
-        width: 30px;
-    }
-
-    & .boxColor9{
-        background-color:#a0c0cf;
-        height: 25px;
-        width: 30px;
-    }
-
-
+  }
+  .social__button {
+    border-color: $color-p3-primary-light;
+  }
 }
