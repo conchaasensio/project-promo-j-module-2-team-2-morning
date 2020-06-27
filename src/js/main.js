@@ -23,7 +23,7 @@ const checkPalette1 = document.querySelector(".js-check1");
 const checkPalette2 = document.querySelector(".js-check2");
 const checkPalette3 = document.querySelector(".js-check3");
 
-//Datos Formulario
+/*--------------------Datos Formulario--------------- */
 
 //Objeto para crear los datos del formulario
 const formData = {};
@@ -45,10 +45,10 @@ const inputEmail = document.querySelector(".js-input-mail");
 const inputPhone = document.querySelector(".js-input-phone");
 const inputLinkedin = document.querySelector(".js-input-linkedin");
 const inputGithub = document.querySelector(".js-input-github");
-const formButton = document.querySelector('.js-share');
-const textShare = document.querySelector('.js-textShare');
+const formButton = document.querySelector('.js-share'); //Variable boton del form
+const textShare = document.querySelector('.js-textShare'); //Variable del texto oculto de compartir
 
-//Funcion que guarda los datos en el objeto y lo pinta en la tarjeta
+//Funcion que guarda los datos en el objeto y lo pinta en la tarjeta el texto
 function setData(ev) {
     const name = ev.currentTarget.name;
     const inputValue = ev.currentTarget.value;
@@ -57,6 +57,7 @@ function setData(ev) {
     cardFields[name].innerHTML = ev.currentTarget.value;
 }
 
+//Funcion que guarda los datos en el objeto y añade los links
 function changeLinks(ev) {
     const name = ev.currentTarget.name;
     const inputValue = ev.currentTarget.value;
@@ -79,7 +80,6 @@ function validation(ev) {
         alert('No has introducido ningún dato');
     }
 }
-
 
 //Listeners
 inputName.addEventListener("keyup", setData);
