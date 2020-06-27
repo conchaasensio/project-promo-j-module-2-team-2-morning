@@ -13,9 +13,9 @@
     }
 } */
 
-const palette1 = document.querySelector('.js-palette1');
-const palette2 = document.querySelector('.js-palette2');
-const palette3 = document.querySelector('.js-palette3');
+// const palette1 = document.querySelector('.js-palette1');
+// const palette2 = document.querySelector('.js-palette2');
+// const palette3 = document.querySelector('.js-palette3');
 
 //FORMULARIO
 //Check Paleta de colores
