@@ -64,6 +64,7 @@ body {
         cursor: pointer;
         transition: background-color 1s ease;
         box-shadow: none;
+        outline: none;
         &:hover {
           background-color: $color-p1-primary-dark;
         }
@@ -78,6 +79,13 @@ body {
       color: $color-text-primary;
       width: 100%;
       padding: 4px 9px;
+    }
+    input:focus,
+    textarea:focus {
+      border-color: $color-primary;
+      box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075) inset,
+        0 0 8px $color-primary;
+      outline: 0 none;
     }
     input::placeholder {
       color: $color-text-light;
