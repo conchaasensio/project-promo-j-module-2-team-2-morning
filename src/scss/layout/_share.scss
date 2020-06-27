@@ -93,5 +93,61 @@
     border: inherit;
     text-align: center;
     margin-top: 20px;
+    cursor: pointer;
   }
 }
+
+.disabled {
+  background-color: rgb(184, 184, 184);
+  width: 199px;
+  height: 50px;
+  color: white;
+  border-radius: 12px;
+  border: inherit;
+  text-align: center;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.text__share {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #d8d8d8;
+
+
+  &__create {
+    font-size: 18px;
+    color: #54585a;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 5px;
+  }
+
+  &__link{
+    font-size: 12px;
+    color: #e17334;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  &__button {
+    width: 181px;
+    height: 30px;
+    color: #ffffff;
+    background-color: #00a0f5;
+    border: inherit;
+    font-size: 14px;
+    text-align: center;
+    padding: 2px;
+    border-radius: 3px;
+    margin-bottom: 30px;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+
