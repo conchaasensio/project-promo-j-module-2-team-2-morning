@@ -36,10 +36,7 @@ const cardFields = {
     telephone: document.querySelector(".js-number"),
     linkedin: document.querySelector(".js-linkedin"),
     github: document.querySelector(".js-github"),
-    name: document.querySelector('.js-share')
 };
-
-console.log(cardFields.name.disabled);
 
 //Variables con input del form
 const inputName = document.querySelector(".js-input-name");
@@ -48,6 +45,8 @@ const inputEmail = document.querySelector(".js-input-mail");
 const inputPhone = document.querySelector(".js-input-phone");
 const inputLinkedin = document.querySelector(".js-input-linkedin");
 const inputGithub = document.querySelector(".js-input-github");
+const formButton = document.querySelector('.js-share');
+const textShare = document.querySelector('.js-textShare');
 
 //Funcion que guarda los datos en el objeto y lo pinta en la tarjeta
 function setData(ev) {
@@ -67,6 +66,20 @@ function changeLinks(ev) {
 }
 
 //Funcion que valida los datos
+function validation(ev) {
+
+    ev.preventDefault()
+
+    if (inputName.value.length > 1 && inputJob.value.length > 1 && inputEmail.value.length > 1 && inputPhone.value.length > 1 && inputLinkedin.value.length > 1 && inputGithub.value.length > 1) {
+        
+        console.log('hola');
+        textShare.classList.remove('hidden');
+        formButton.classList.add('disabled');
+    } else {
+        alert('No has introducido ningún dato');
+    }
+}
+
 
 //Listeners
 inputName.addEventListener("keyup", setData);
@@ -75,7 +88,7 @@ inputEmail.addEventListener('keyup', changeLinks);
 inputPhone.addEventListener('keyup', changeLinks);
 inputLinkedin.addEventListener('keyup', changeLinks);
 inputGithub.addEventListener('keyup', changeLinks);
-
+formButton.addEventListener('click', validation)
 
 //-------------------RESET------------------------
 // get resetElement dom element
