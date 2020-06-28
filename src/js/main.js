@@ -19,34 +19,28 @@
 
 //FORMULARIO
 //Check Paleta de colores
+const paletteClassList = document.querySelector('.preview__container')
+  .classList;
+
 const checkPalette1 = document.querySelector('.js-check1');
-
 function setPalette1() {
-  document.querySelector('.preview__container').classList.add('palette1');
-  document.querySelector('.preview__container').classList.remove('palette2');
-  document.querySelector('.preview__container').classList.remove('palette3');
+  paletteClassList.add('palette1');
+  paletteClassList.remove('palette2', 'palette3');
 }
-
 checkPalette1.addEventListener('click', setPalette1);
 
 const checkPalette2 = document.querySelector('.js-check2');
-
 function setPalette2() {
-  document.querySelector('.preview__container').classList.add('palette2');
-  document.querySelector('.preview__container').classList.remove('palette1');
-  document.querySelector('.preview__container').classList.remove('palette3');
+  paletteClassList.add('palette2');
+  paletteClassList.remove('palette1', 'palette3');
 }
-
 checkPalette2.addEventListener('click', setPalette2);
 
 const checkPalette3 = document.querySelector('.js-check3');
-
 function setPalette3() {
-  document.querySelector('.preview__container').classList.add('palette3');
-  document.querySelector('.preview__container').classList.remove('palette1');
-  document.querySelector('.preview__container').classList.remove('palette2');
+  paletteClassList.add('palette3');
+  paletteClassList.remove('palette1', 'palette2');
 }
-
 checkPalette3.addEventListener('click', setPalette3);
 
 /*--------------------Datos Formulario--------------- */
