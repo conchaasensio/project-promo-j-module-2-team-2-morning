@@ -140,3 +140,16 @@ function changeToRed() {
   console.log('changeToRed');
   document.querySelector('.preview__container').classList.add('palette1');
 }
+
+// COLLAPSIBLE SECTIONS
+const arrow = document.querySelector('.js-arrow');
+const collapsible = document.querySelector('.js-collapsed');
+
+arrow.addEventListener('click', function () {
+  collapsible.classList.toggle('.js-collapsed');
+  if (collapsible.style.display === 'block') {
+    collapsible.style.display = 'none';
+  } else {
+    collapsible.style.display = 'block';
+  }
+});
