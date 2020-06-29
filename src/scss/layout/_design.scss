@@ -150,10 +150,10 @@
 
 //COLLAPSIBLE SECTIONS
 
-.close .design__content {
-  display: none;
-}
+// .close .design__content {
+//   display: none;
+// }
 
-.close .fa-chevron-up {
+.hidden .fa-chevron-down {
   transform: rotate(180deg);
 }
