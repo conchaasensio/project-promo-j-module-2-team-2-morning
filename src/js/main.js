@@ -142,12 +142,26 @@ function changeToRed() {
 }
 
 // COLLAPSIBLE SECTIONS
-const arrow = document.querySelector('.js-arrow');
+const arrow1 = document.querySelector('.js-arrow1');
+const arrow2 = document.querySelector('.js-arrow2');
+const arrow3 = document.querySelector('.js-arrow3');
 const collapsible = document.querySelector('.js-collapsed');
-const collapsibleHidden = document.querySelector('.js-hidden');
+const collapsibleHidden1 = document.querySelector('.js-hidden1');
+const collapsibleHidden2 = document.querySelector('.js-hidden2');
+const collapsibleHidden3 = document.querySelector('.js-hidden3');
 
-function changeCollapsible() {
-  collapsibleHidden.classList.toggle('hidden');
+console.log(collapsibleHidden3);
+
+function changeCollapsible1() {
+  collapsibleHidden1.classList.toggle('hidden');
+}
+function changeCollapsible2() {
+  collapsibleHidden2.classList.toggle('hidden');
+}
+function changeCollapsible3() {
+  collapsibleHidden3.classList.toggle('hidden');
 }
 
-arrow.addEventListener('click', changeCollapsible);
+arrow1.addEventListener('click', changeCollapsible1);
+arrow2.addEventListener('click', changeCollapsible2);
+arrow3.addEventListener('click', changeCollapsible3);
