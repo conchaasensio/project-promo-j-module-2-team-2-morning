@@ -127,6 +127,10 @@
   .social__button {
     border-color: $color-p1-primary-light;
   }
+
+  .fa-mobile-alt, .fa-envelope, .fa-linkedin-in, .fa-github-alt{
+    color: $color-p1-primary-dark;
+  }
 }
 
 .palette2 {
@@ -139,6 +143,9 @@
   .social__button {
     border-color: $color-p2-primary;
   }
+  .fa-mobile-alt, .fa-envelope, .fa-linkedin-in, .fa-github-alt{
+    color: $color-p2-primary-dark;
+  }
 }
 
 .palette3 {
@@ -150,6 +157,10 @@
   }
   .social__button {
     border-color: $color-p3-primary-light;
+
+    .fa-mobile-alt, .fa-envelope, .fa-linkedin-in, .fa-github-alt{
+      color: $color-p3-primary-dark;
+    }
   }
 }
 
