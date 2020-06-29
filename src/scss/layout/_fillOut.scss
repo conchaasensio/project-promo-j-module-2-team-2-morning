@@ -4,30 +4,38 @@ body {
 }
 
 .fillOut {
-  line-height: 2;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
   padding-top: 10px;
-  padding-bottom: 10px;
-  width: 281px;
-  margin: auto;
+  padding-bottom: 10px; 
+  width: 320px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 30px;
   border-bottom: 1px solid $color-line;
+  cursor: pointer;
 
   &__title {
     display: flex;
+    height: 41px;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    font-size: rem(18);
+    margin-left: 20px;
+    margin-right: 20px;
     color: $color-text-primary;
+
+    & .content__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
     h2 {
       text-transform: uppercase;
+      font-size: 18px;
+      padding-left: 10px;
     }
     .fa-keyboard-o {
       color: $color-primary;
-      margin-right: 10px;
     }
     .fa-chevron-down {
       color: $color-text-primary;
