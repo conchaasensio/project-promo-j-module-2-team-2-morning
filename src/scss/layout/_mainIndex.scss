@@ -17,12 +17,14 @@
   background-color: #f5f5f5;
   height: 90vh;
   width: 100%;
-  padding: 95px 35px 0px 35px;
+  padding: 0px 35px 0px 35px;
 
-  &_img {
+  & img {
+    margin-top: 95px;
     width: 250px;
     @media all and (min-width: 768px) {
       width: 419px;
+      margin-top: 350px;
     }
     img {
       width: 100%;
