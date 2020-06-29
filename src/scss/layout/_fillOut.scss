@@ -4,12 +4,9 @@ body {
 }
 
 .fillOut {
-  padding-top: 10px;
-  padding-bottom: 10px; 
   width: 320px;
   margin-left: 20px;
   margin-right: 20px;
-  margin-bottom: 30px;
   border-bottom: 1px solid $color-line;
   cursor: pointer;
 
@@ -36,9 +33,11 @@ body {
     }
     .fa-keyboard-o {
       color: $color-primary;
+      font-size: 18px;
     }
     .fa-chevron-down {
       color: $color-text-primary;
+      font-size: 18px;
     }
   }
 

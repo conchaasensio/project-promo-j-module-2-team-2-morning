@@ -22,6 +22,7 @@
 
     & .icon {
       color: #e17334;
+      font-size: 18px;
     }
 
     & .titleMenu {
@@ -29,6 +30,7 @@
       font-size: 18px;
       padding-left: 10px;
     }
+
   }
 }
 
@@ -157,6 +159,12 @@
 //   display: none;
 // }
 
-.hidden .fa-chevron-down {
+
+.fa-chevron-down {
+  color: $color-text-primary;
+  font-size: 18px;
+}
+
+.transform {
   transform: rotate(180deg);
 }
