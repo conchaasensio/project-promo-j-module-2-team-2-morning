@@ -145,6 +145,12 @@ function changeToRed() {
 const arrow = document.querySelector('.js-arrow');
 const collapsible = document.querySelector('.js-collapsed');
 
-arrow.addEventListener('click', function () {
-  collapsible.classList.toggle('close');
-});
+function expand() {
+  collapsible.classList.toggle('hidden');
+}
+
+arrow.addEventListener('click', expand);
+
+// function () {
+//   collapsible.classList.toggle('close');
+// });
