@@ -144,7 +144,10 @@ function changeToRed() {
 // COLLAPSIBLE SECTIONS
 const arrow = document.querySelector('.js-arrow');
 const collapsible = document.querySelector('.js-collapsed');
+const collapsibleHidden = document.querySelector('.js-hidden');
 
-arrow.addEventListener('click', function () {
-  collapsible.classList.toggle('close');
-});
+function changeCollapsible() {
+  collapsibleHidden.classList.toggle('hidden');
+}
+
+arrow.addEventListener('click', changeCollapsible);
