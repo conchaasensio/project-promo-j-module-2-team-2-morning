@@ -1,8 +1,8 @@
 <div class="fillOut">
   <div class="fillOut__title js-arrow2">
     <div class="content__title">
-    <i class="fa fa-keyboard-o" aria-hidden="true"></i>
-    <h2>Rellena</h2>
+      <i class="fa fa-keyboard-o" aria-hidden="true"></i>
+      <h2>Rellena</h2>
     </div>
     <i class="fa fa-chevron-down js-arrowTransform2" aria-hidden="true"></i>
   </div>
@@ -34,18 +34,26 @@
       </label>
     </div>
     <div class="item">
-      <label for="addImage"
+      <label for="img-selector"
         >Imagen de perfil
         <div class="fillOut-image">
-          <input
-            type="button"
-            id="addImage"
-            name="addImage"
-            value="Añadir imagen"
-            class="fillOut-button"
-            required
-          />
-          <input type="text" id="addImage" name="addImage" class="textImage" />
+          <div class="action">
+            <button
+              class="action__upload-btn js__profile-trigger"
+              type="button"
+            >
+              Añadir imagen
+            </button>
+            <input
+              type="file"
+              name=""
+              id="img-selector"
+              class="action__hiddenField js__profile-upload-btn"
+            />
+          </div>
+          <div class="profile">
+            <div class="profile__preview js__profile-preview"></div>
+          </div>
         </div>
       </label>
     </div>

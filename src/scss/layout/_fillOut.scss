@@ -1,6 +1,6 @@
 body {
   font-size: rem(16);
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .fillOut {
@@ -8,7 +8,6 @@ body {
   margin-left: 20px;
   margin-right: 20px;
   border-bottom: 1px solid $color-line;
-  cursor: pointer;
 
   &__title {
     display: flex;
@@ -19,11 +18,12 @@ body {
     margin-left: 20px;
     margin-right: 20px;
     color: $color-text-primary;
+    cursor: pointer;
 
     & .content__title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     h2 {
@@ -54,8 +54,10 @@ body {
       flex-direction: row;
       justify-content: left;
       align-items: center;
+      margin-top: 10px;
+      margin-bottom: 20px;
 
-      .textImage {
+      /* .textImage {
         width: 30px;
         height: 30px;
         display: inline-block;
@@ -78,14 +80,14 @@ body {
         &:focus {
           border: 2px solid $color-primary;
         }
-      }
+      } */
     }
     input {
-      display: block;
       border: 1px solid $color-p1-primary-light;
       color: $color-text-primary;
       width: 100%;
       padding: 4px 9px;
+      margin-top: 7px;
     }
     input:focus,
     textarea:focus {
@@ -103,5 +105,43 @@ body {
   }
 }
 
+/* ESTILOS AÑADIR FOTO */
+.action {
+  text-align: center;
+}
+.action__upload-btn {
+  background-color: $color-primary;
+  color: white;
+  border: $color-primary;
+  width: 140px;
+  height: 30px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 1s ease;
+  box-shadow: none;
+  outline: none;
+  &:hover {
+    background-color: $color-p1-primary-dark;
+  }
+  &:focus {
+    border: 2px solid $color-primary;
+  }
+}
+.action__hiddenField {
+  /* Ocultamos el input de tipo "file" porque no podemos 
+  darle los estilos que queremos */
+  display: none;
+}
+
+.profile {
+  display: flex;
+  justify-content: center;
+}
+
+.profile__preview {
+  width: 30px;
+  height: 30px;
+  margin-left: 20px;
+}
 @media all and (min-width: 768px) {
 }

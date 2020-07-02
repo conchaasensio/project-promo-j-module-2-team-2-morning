@@ -102,3 +102,14 @@
   justify-content: center;
   margin-right: 10px;
 }
+.profile__image,
+.profile__preview {
+  background-position: center;
+  backround-repeat: no-repeat;
+  background-size: cover;
+  border: 1px solid #ccc;
+}
+.profile__image {
+  width: 240px;
+  height: 200px;
+}
