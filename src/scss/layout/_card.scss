@@ -42,7 +42,7 @@
     -ms-transition: background-color 0.4s linear;
     -o-transition: background-color 0.4s linear;
     transition: background-color 0.4s linear;
-    color: $color-text-primary;
+    color: $color-primary;
   }
 }
 
@@ -105,7 +105,7 @@
 .profile__image,
 .profile__preview {
   background-position: center;
-  backround-repeat: no-repeat;
+  background-repeat: no-repeat;
   background-size: cover;
   border: 1px solid #ccc;
 }

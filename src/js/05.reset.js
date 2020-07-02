@@ -6,7 +6,8 @@
 const resetElement = document.querySelector('.js-reset');
 
 // clear all inputs
-function reset() {
+function reset(ev) {
+  ev.preventDefault();
   inputName.value = '';
   inputJob.value = '';
   inputEmail.value = '';
