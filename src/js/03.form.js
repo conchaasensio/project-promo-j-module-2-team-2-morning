@@ -29,11 +29,22 @@ const textShare = document.querySelector('.js-textShare'); //Variable del texto 
 
 //Funcion que guarda los datos en el objeto y lo pinta en la tarjeta el texto
 function setData(ev) {
-  const name = ev.currentTarget.name;
+  /* const name = ev.currentTarget.name;
   const inputValue = ev.currentTarget.value;
 
   formData[name] = inputValue;
-  cardFields[name].innerHTML = inputValue;
+  cardFields[name].innerHTML = inputValue; */
+  if (inputName === ev.currentTarget) {
+    cardFields.name.innerHTML = inputName.value;
+    if (inputName.value === '') {
+      cardFields.name.innerHTML = 'Nombre Apellido';
+    }
+  } else if (inputJob === ev.currentTarget) {
+    cardFields.job.innerHTML = inputJob.value;
+    if (inputJob.value === '') {
+      cardFields.job.innerHTML = 'Front-end developer';
+    }
+  }
 }
 
 //Funcion que guarda los datos en el objeto y añade los links

@@ -15,13 +15,9 @@ function reset(ev) {
   inputLinkedin.value = '';
   inputGithub.value = '';
 
-  if ((inputName.value = '')) {
-    cardFields.fullname.innerHTML = 'Nombre Apellido';
-  } else if ((inputJob.value = '')) {
-    cardFields.job.innerHTML = 'Front-end developer';
-  }
-
-  setPalette1();
+  paletteStyle.classList.add('palette1');
+  paletteStyle.classList.remove('palette2');
+  paletteStyle.classList.remove('palette3');
 }
 
 // listen click in reset button
