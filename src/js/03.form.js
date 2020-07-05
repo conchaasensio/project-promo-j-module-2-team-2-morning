@@ -7,12 +7,14 @@ const formData = {};
 
 //Objeto que tiene todas las clases de la card para poder pintarlas
 const cardFields = {
-  fullname: document.querySelector('.js-text-name'),
+  palette: document.querySelector('.js-check:checked').value,
+  name: document.querySelector('.js-text-name'),
   job: document.querySelector('.js-text-job'),
-  emailAddress: document.querySelector('.js-mail'),
-  telephone: document.querySelector('.js-number'),
+  email: document.querySelector('.js-mail'),
+  phone: document.querySelector('.js-number'),
   linkedin: document.querySelector('.js-linkedin'),
   github: document.querySelector('.js-github'),
+  /* photo: fr.result; */
 };
 
 //Variables con input del form
@@ -31,7 +33,7 @@ function setData(ev) {
   const inputValue = ev.currentTarget.value;
 
   formData[name] = inputValue;
-  cardFields[name].innerHTML = ev.currentTarget.value;
+  cardFields[name].innerHTML = inputValue;
 }
 
 //Funcion que guarda los datos en el objeto y añade los links
