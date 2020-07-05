@@ -69,6 +69,8 @@
   font-weight: 700;
   font-size: 18px;
   color: $color-p1-primary-dark;
+  word-wrap: break-word;
+  word-break: break-all;
 }
 
 .title__position {
@@ -76,6 +78,8 @@
   font-weight: 400;
   font-size: 16px;
   color: $color-text-primary;
+  word-wrap: break-word;
+  word-break: break-all;
 }
 
 .card__photo {

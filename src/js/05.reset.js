@@ -15,15 +15,14 @@ function reset(ev) {
   inputLinkedin.value = '';
   inputGithub.value = '';
 
-  cardFields.fullname.innerHTML = 'Nombre Apellido';
-  cardFields.job.innerHTML = 'Front-end developer';
+  if ((inputName.value = '')) {
+    cardFields.fullname.innerHTML = 'Nombre Apellido';
+  } else if ((inputJob.value = '')) {
+    cardFields.job.innerHTML = 'Front-end developer';
+  }
+
+  setPalette1();
 }
 
 // listen click in reset button
 resetElement.addEventListener('click', reset);
-resetElement.addEventListener('click', setPalette1);
-
-function changeToRed() {
-  console.log('changeToRed');
-  document.querySelector('.preview__container').classList.add('palette1');
-}
