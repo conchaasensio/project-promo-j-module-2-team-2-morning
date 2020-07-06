@@ -4,6 +4,7 @@
 //Check Paleta de colores
 const paletteStyle = document.querySelector('.preview__card');
 const palettes = document.querySelectorAll('.js-check');
+palettes[0].checked = true;
 
 function changePalette(ev) {
   if (ev.target === palettes[0]) {
