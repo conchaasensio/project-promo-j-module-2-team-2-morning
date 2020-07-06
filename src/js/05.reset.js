@@ -14,7 +14,7 @@ function reset(ev) {
   inputPhone.value = '';
   inputLinkedin.value = '';
   inputGithub.value = '';
-
+  palettes[0].checked = true;
   paletteStyle.classList.add('palette1');
   paletteStyle.classList.remove('palette2');
   paletteStyle.classList.remove('palette3');

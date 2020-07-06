@@ -3,7 +3,9 @@
 /*--------------------Datos Formulario--------------- */
 
 //Objeto para crear los datos del formulario
-const formData = {};
+const formData = {
+  photo: '',
+};
 
 //Objeto que tiene todas las clases de la card para poder pintarlas
 const cardFields = {
@@ -14,7 +16,6 @@ const cardFields = {
   phone: document.querySelector('.js-number'),
   linkedin: document.querySelector('.js-linkedin'),
   github: document.querySelector('.js-github'),
-  /* photo: fr.result; */
 };
 
 //Variables con input del form
