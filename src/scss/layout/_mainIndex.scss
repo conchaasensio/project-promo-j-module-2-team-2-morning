@@ -105,6 +105,12 @@
     padding: 10px;
     font-size: 1rem;
   }
+  transition: background-color 0.5s ease;
+  box-shadow: none;
+  outline: none;
+  &:hover {
+    background-color: $color-primary;
+  }
   @media all and (min-width: 768px) {
     margin-top: 186px;
     margin-bottom: 59px;

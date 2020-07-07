@@ -6,23 +6,19 @@
 const resetElement = document.querySelector('.js-reset');
 
 // clear all inputs
-function reset() {
+function reset(ev) {
+  ev.preventDefault();
   inputName.value = '';
   inputJob.value = '';
   inputEmail.value = '';
   inputPhone.value = '';
   inputLinkedin.value = '';
   inputGithub.value = '';
-
-  cardFields.fullname.innerHTML = 'Nombre Apellido';
-  cardFields.job.innerHTML = 'Front-end developer';
+  palettes[0].checked = true;
+  paletteStyle.classList.add('palette1');
+  paletteStyle.classList.remove('palette2');
+  paletteStyle.classList.remove('palette3');
 }
 
 // listen click in reset button
 resetElement.addEventListener('click', reset);
-resetElement.addEventListener('click', setPalette1);
-
-function changeToRed() {
-  console.log('changeToRed');
-  document.querySelector('.preview__container').classList.add('palette1');
-}

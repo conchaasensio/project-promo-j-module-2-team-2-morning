@@ -1,8 +1,13 @@
 .box__design {
-  width: 320px;
+  width: 280px;
   margin-left: 20px;
   margin-right: 20px;
-  border-bottom: 1px solid #d8d8d8;
+  border-bottom: 1px solid $color-line;
+  @include tablet {
+    width: 330px;
+    margin-left: 40px;
+    margin-right: 30px;
+  }
 }
 
 .design__menu {
@@ -10,7 +15,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #54585a;
+  color: $color-text-primary;
   cursor: pointer;
 
   & .content__title {
@@ -19,7 +24,7 @@
     align-items: center;
 
     & .icon {
-      color: #e17334;
+      color: $color-primary;
       font-size: 18px;
     }
 
@@ -27,6 +32,9 @@
       text-transform: uppercase;
       font-size: 18px;
       padding-left: 10px;
+      &:hover {
+        color: $color-primary;
+      }
     }
   }
 }
@@ -42,7 +50,7 @@
   &__title {
     text-transform: uppercase;
     font-size: 14px;
-    color: #54585a;
+    color: $color-text-primary;
   }
 
   &__form {
@@ -60,55 +68,55 @@
   margin-left: 10px;
 
   & .boxColor1 {
-    background-color: #114e4e;
+    background-color: $color-p1-primary-dark;
     height: 25px;
     width: 30px;
   }
 
   & .boxColor2 {
-    background-color: #438792;
+    background-color: $color-p1-primary;
     height: 25px;
     width: 30px;
   }
 
   & .boxColor3 {
-    background-color: #a2deaf;
+    background-color: $color-p1-primary-light;
     height: 25px;
     width: 30px;
   }
 
   & .boxColor4 {
-    background-color: #420101;
+    background-color: $color-p2-primary-dark;
     height: 25px;
     width: 30px;
   }
 
   & .boxColor5 {
-    background-color: #bd1010;
+    background-color: $color-p2-primary-light;
     height: 25px;
     width: 30px;
   }
 
   & .boxColor6 {
-    background-color: #e95626;
+    background-color: $color-p2-primary;
     height: 25px;
     width: 30px;
   }
 
   & .boxColor7 {
-    background-color: #3e5b65;
+    background-color: $color-p3-primary-dark;
     height: 25px;
     width: 30px;
   }
 
   & .boxColor8 {
-    background-color: #eab052;
+    background-color: $color-p3-primary;
     height: 25px;
     width: 30px;
   }
 
   & .boxColor9 {
-    background-color: #a0c0cf;
+    background-color: $color-p3-primary-light;
     height: 25px;
     width: 30px;
   }
@@ -170,15 +178,12 @@
   }
 }
 
-//COLLAPSIBLE SECTIONS
-
-// .close .design__content {
-//   display: none;
-// }
-
 .fa-chevron-down {
   color: $color-text-primary;
   font-size: 18px;
+  &:hover {
+    color: $color-primary;
+  }
 }
 
 .transform {

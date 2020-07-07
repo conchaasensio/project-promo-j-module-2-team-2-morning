@@ -2,26 +2,28 @@
 
 //FORMULARIO
 //Check Paleta de colores
-const paletteClassList = document.querySelector('.preview__container')
-  .classList;
+const paletteStyle = document.querySelector('.preview__card');
+const palettes = document.querySelectorAll('.js-check');
+palettes[0].checked = true;
 
-const checkPalette1 = document.querySelector('.js-check1');
-function setPalette1() {
-  paletteClassList.add('palette1');
-  paletteClassList.remove('palette2', 'palette3');
+function changePalette(ev) {
+  paletteStyle.classList.remove('palette1', 'palette2', 'palette3');
+  if (ev.currenTarget === palettes[0]) {
+    paletteStyle.classList.add('palette1');
+  } else if (ev.currentTarget === palettes[1]) {
+    paletteStyle.classList.add('palette2');
+  } else if (ev.currentTarget === palettes[2]) {
+    paletteStyle.classList.add('palette3');
+  }
+  addPaletteObject(ev);
 }
-checkPalette1.addEventListener('click', setPalette1);
+function addPaletteObject(ev) {
+  const name = ev.currentTarget.name;
+  const inputValue = ev.currentTarget.value;
 
-const checkPalette2 = document.querySelector('.js-check2');
-function setPalette2() {
-  paletteClassList.add('palette2');
-  paletteClassList.remove('palette1', 'palette3');
+  formData[name] = inputValue;
 }
-checkPalette2.addEventListener('click', setPalette2);
 
-const checkPalette3 = document.querySelector('.js-check3');
-function setPalette3() {
-  paletteClassList.add('palette3');
-  paletteClassList.remove('palette1', 'palette2');
+for (const palette of palettes) {
+  palette.addEventListener('change', changePalette);
 }
-checkPalette3.addEventListener('click', setPalette3);

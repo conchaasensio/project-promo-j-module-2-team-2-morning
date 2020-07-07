@@ -3,10 +3,13 @@
 /*--------------------Datos Formulario--------------- */
 
 //Objeto para crear los datos del formulario
-const formData = {};
+const formData = {
+  photo: '',
+};
 
 //Objeto que tiene todas las clases de la card para poder pintarlas
 const cardFields = {
+  palette: document.querySelector('.js-check:checked').value,
   name: document.querySelector('.js-text-name'),
   job: document.querySelector('.js-text-job'),
   email: document.querySelector('.js-mail'),
@@ -31,16 +34,22 @@ const textShare = document.querySelector('.js-textShare'); //Variable del texto 
 
 //Funcion que guarda los datos en el objeto y lo pinta en la tarjeta el texto
 function setData(ev) {
-/*   for (const input of form) {
-    const inputValue = input.value;
-    console.log(inputValue);
-  } */
-
-  const name = ev.currentTarget.name;
+  /* const name = ev.currentTarget.name;
   const inputValue = ev.currentTarget.value;
 
   formData[name] = inputValue;
-  cardFields[name].innerHTML = ev.currentTarget.value; 
+  cardFields[name].innerHTML = inputValue; */
+  if (inputName === ev.currentTarget) {
+    cardFields.name.innerHTML = inputName.value;
+    if (inputName.value === '') {
+      cardFields.name.innerHTML = 'Nombre Apellido';
+    }
+  } else if (inputJob === ev.currentTarget) {
+    cardFields.job.innerHTML = inputJob.value;
+    if (inputJob.value === '') {
+      cardFields.job.innerHTML = 'Front-end developer';
+    }
+  }
 }
 
 //Funcion que guarda los datos en el objeto y añade los links
