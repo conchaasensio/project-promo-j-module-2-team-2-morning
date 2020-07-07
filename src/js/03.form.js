@@ -30,11 +30,18 @@ const textShare = document.querySelector('.js-textShare'); //Variable del texto 
 
 //Funcion que guarda los datos en el objeto y lo pinta en la tarjeta el texto
 function setData(ev) {
-  /* const name = ev.currentTarget.name;
+  const name = ev.currentTarget.name;
   const inputValue = ev.currentTarget.value;
 
   formData[name] = inputValue;
-  cardFields[name].innerHTML = inputValue; */
+
+  updateCard();
+}
+
+function updateCardTexts(ev) {
+  // actualizamos el título
+  // y el puesto
+
   if (inputName === ev.currentTarget) {
     cardFields.name.innerHTML = inputName.value;
     if (inputName.value === '') {
@@ -49,15 +56,36 @@ function setData(ev) {
 }
 
 //Funcion que guarda los datos en el objeto y añade los links
-function changeLinks(ev) {
+function setLinks(ev) {
   const name = ev.currentTarget.name;
   const inputValue = ev.currentTarget.value;
-
   formData[name] = inputValue;
-  cardFields[name].href = ev.currentTarget.value;
+  updateCard();
 }
 
-console.log(formData);
+function updateCard() {
+  updateCardTexts('name');
+  updateCardTexts('job');
+  updateCardLinks('email', 'mailto:');
+  updateCardLinks('phone', 'tel');
+  updateCardLinks('linkedin', 'https://linkedin.com/in/');
+  updateCardLinks('github', 'https://github.com/');
+  updateCardPhoto();
+}
+
+function updateCardLinks(name, prefix) {
+  cardFields[name].href = prefix + formData[name];
+}
+
+function setPhoto(photo) {
+  formData.photo = photo;
+  updateCard();
+}
+
+function updateCardPhoto() {
+  profileImage.style.backgroundImage = `url(${formData.photo})`;
+  profilePreview.style.backgroundImage = `url(${formData.photo})`;
+}
 
 //Funcion que valida los datos
 function validation(ev) {
@@ -81,8 +109,10 @@ function validation(ev) {
 //Listeners
 inputName.addEventListener('keyup', setData);
 inputJob.addEventListener('keyup', setData);
-inputEmail.addEventListener('keyup', changeLinks);
-inputPhone.addEventListener('keyup', changeLinks);
-inputLinkedin.addEventListener('keyup', changeLinks);
-inputGithub.addEventListener('keyup', changeLinks);
+inputEmail.addEventListener('keyup', setLinks);
+inputPhone.addEventListener('keyup', setLinks);
+inputLinkedin.addEventListener('keyup', setLinks);
+inputGithub.addEventListener('keyup', setLinks);
 formButton.addEventListener('click', validation);
+
+console.log(formData);
