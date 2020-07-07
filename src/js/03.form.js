@@ -50,24 +50,6 @@ function setData(ev) {
   updateCard();
 }
 
-/* function updateCardTexts(name, ev) { 
-  // actualizamos el título
-  // y el
-/*   cardFields[name].innerHTML = formData[name];
-
-  if (inputValue === formData.name) {
-    cardFields.name.innerHTML = formData.name;
-    if (inputValue === '') {
-      cardFields.name.innerHTML = 'Nombre Apellido';
-    }
-  } else if (inputValue === formData.job) {
-    cardFields.job.innerHTML = formData.job;
-    if (inputValue === '') {
-      cardFields.job.innerHTML = 'Front-end developer';
-    }
-  }  
-}*/
-
 //Funcion que guarda los datos en el objeto y añade los links
 function setLinks(ev) {
   const name = ev.currentTarget.name;
@@ -77,8 +59,6 @@ function setLinks(ev) {
 }
 
 function updateCard() {
-  /*   updateCardTexts('name');
-  updateCardTexts('job'); */
   updateCardLinks('email', 'mailto:');
   updateCardLinks('phone', 'tel');
   updateCardLinks('linkedin', 'https://linkedin.com/in/');
@@ -121,6 +101,8 @@ function validation(ev) {
   sendRequest(formData);
 }
 
+const linkShare = document.querySelector('.js-linkShare');
+
 function sendRequest(formData) {
   fetch('https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card/', {
     method: 'POST',
@@ -143,10 +125,11 @@ function sendRequest(formData) {
 function showURL(result) {
   if (result.success) {
     console.log('Toma tu tarjeta');
-    /*  responseURL.innerHTML = '<a href=' + result.cardURL + '>' + result.cardURL + '</a>'; */
+    linkShare.innerHTML =
+      '<a href=' + result.cardURL + '>' + result.cardURL + '</a>';
   } else {
     console.log('ERROR');
-    /* responseURL.innerHTML = 'ERROR:' + result.error; */
+    linkShare.innerHTML = 'ERROR:' + result.error;
   }
 }
 
