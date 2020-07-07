@@ -34,26 +34,39 @@ function setData(ev) {
   const inputValue = ev.currentTarget.value;
 
   formData[name] = inputValue;
+  cardFields[name].innerHTML = formData[name];
 
-  updateCard();
-}
-
-function updateCardTexts(ev) {
-  // actualizamos el título
-  // y el puesto
-
-  if (inputName === ev.currentTarget) {
-    cardFields.name.innerHTML = inputName.value;
-    if (inputName.value === '') {
+  if (inputValue === formData.name) {
+    cardFields.name.innerHTML = formData.name;
+    if (inputValue === '') {
       cardFields.name.innerHTML = 'Nombre Apellido';
     }
-  } else if (inputJob === ev.currentTarget) {
-    cardFields.job.innerHTML = inputJob.value;
-    if (inputJob.value === '') {
+  } else if (inputValue === formData.job) {
+    cardFields.job.innerHTML = formData.job;
+    if (inputValue === '') {
       cardFields.job.innerHTML = 'Front-end developer';
     }
   }
+  updateCard();
 }
+
+/* function updateCardTexts(name, ev) { 
+  // actualizamos el título
+  // y el
+/*   cardFields[name].innerHTML = formData[name];
+
+  if (inputValue === formData.name) {
+    cardFields.name.innerHTML = formData.name;
+    if (inputValue === '') {
+      cardFields.name.innerHTML = 'Nombre Apellido';
+    }
+  } else if (inputValue === formData.job) {
+    cardFields.job.innerHTML = formData.job;
+    if (inputValue === '') {
+      cardFields.job.innerHTML = 'Front-end developer';
+    }
+  }  
+}*/
 
 //Funcion que guarda los datos en el objeto y añade los links
 function setLinks(ev) {
@@ -64,8 +77,8 @@ function setLinks(ev) {
 }
 
 function updateCard() {
-  updateCardTexts('name');
-  updateCardTexts('job');
+  /*   updateCardTexts('name');
+  updateCardTexts('job'); */
   updateCardLinks('email', 'mailto:');
   updateCardLinks('phone', 'tel');
   updateCardLinks('linkedin', 'https://linkedin.com/in/');
@@ -103,6 +116,37 @@ function validation(ev) {
     formButton.classList.add('disabled');
   } else {
     alert('No has introducido ningún dato');
+  }
+
+  sendRequest(formData);
+}
+
+function sendRequest(formData) {
+  fetch('https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card/', {
+    method: 'POST',
+    body: JSON.stringify(formData),
+    headers: {
+      'content-type': 'application/json',
+    },
+  })
+    .then(function (resp) {
+      return resp.json();
+    })
+    .then(function (result) {
+      showURL(result);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+}
+
+function showURL(result) {
+  if (result.success) {
+    console.log('Toma tu tarjeta');
+    /*  responseURL.innerHTML = '<a href=' + result.cardURL + '>' + result.cardURL + '</a>'; */
+  } else {
+    console.log('ERROR');
+    /* responseURL.innerHTML = 'ERROR:' + result.error; */
   }
 }
 
