@@ -50,31 +50,35 @@ function setData(ev) {
   updateCard();
 }
 
-//Funcion que guarda los datos en el objeto y añade los links
+//Funcion que guarda los datos en el objeto
 function setLinks(ev) {
   const name = ev.currentTarget.name;
   const inputValue = ev.currentTarget.value;
   formData[name] = inputValue;
   updateCard();
 }
+//Funcion que imprime los datos en la tarjeta
+function updateCardLinks(name, prefix) {
+  cardFields[name].href = prefix + formData[name];
+}
 
+//Funcion que actualiza los datos de la tarjeta
 function updateCard() {
   updateCardLinks('email', 'mailto:');
   updateCardLinks('phone', 'tel');
   updateCardLinks('linkedin', 'https://linkedin.com/in/');
   updateCardLinks('github', 'https://github.com/');
   updateCardPhoto();
+  localStorage.setItem('userInfo', JSON.stringify(formData));
 }
 
-function updateCardLinks(name, prefix) {
-  cardFields[name].href = prefix + formData[name];
-}
-
+//Funcion que guarda los datos de la imagen en el objeto
 function setPhoto(photo) {
   formData.photo = photo;
   updateCard();
 }
 
+//funcion que imprime la imagen en la tarjeta y preview
 function updateCardPhoto() {
   profileImage.style.backgroundImage = `url(${formData.photo})`;
   profilePreview.style.backgroundImage = `url(${formData.photo})`;
@@ -101,6 +105,7 @@ function validation(ev) {
   sendRequest(formData);
 }
 
+//------------------PETICION AL SERVIDOR - FETCH---------------------
 const linkShare = document.querySelector('.js-linkShare');
 
 function sendRequest(formData) {
@@ -130,6 +135,34 @@ function showURL(result) {
     linkShare.innerHTML = 'ERROR:' + result.error;
   }
 }
+
+//---------------------LOCAL STORAGE--------------------------------------
+
+//Guardamos los datos en el localStorage
+document.addEventListener('keyup', function () {
+  localStorage.setItem('userInfo', JSON.stringify(formData));
+});
+
+//recuperar datos al refrescar
+function uploadInfo() {
+  const savedInfo = JSON.parse(localStorage.getItem('userInfo'));
+  if (savedInfo !== null) {
+    inputName.value = savedInfo.name;
+    inputJob.value = savedInfo.job;
+    inputEmail.value = savedInfo.email;
+    inputPhone.value = savedInfo.phone;
+    inputLinkedin.value = savedInfo.linkedin;
+    inputGithub.value = savedInfo.github;
+    document.querySelector('.js-check:checked').value = savedInfo.palette;
+    profileImage.style.backgroundImage = `url(${savedInfo.photo})`;
+    profilePreview.style.backgroundImage = `url(${savedInfo.photo})`;
+  } else {
+    console.log('No hay datos en el localStorage');
+  }
+}
+uploadInfo();
+
+//------------------------------------------------
 
 //Listeners
 inputName.addEventListener('keyup', setData);
