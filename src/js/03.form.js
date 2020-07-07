@@ -124,11 +124,9 @@ function sendRequest(formData) {
 
 function showURL(result) {
   if (result.success) {
-    console.log('Toma tu tarjeta');
     linkShare.innerHTML =
       '<a href=' + result.cardURL + '>' + result.cardURL + '</a>';
   } else {
-    console.log('ERROR');
     linkShare.innerHTML = 'ERROR:' + result.error;
   }
 }
