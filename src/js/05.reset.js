@@ -18,6 +18,8 @@ function reset(ev) {
   paletteStyle.classList.add('palette1');
   paletteStyle.classList.remove('palette2');
   paletteStyle.classList.remove('palette3');
+
+  localStorage.removeItem('userInfo');
 }
 
 // listen click in reset button
