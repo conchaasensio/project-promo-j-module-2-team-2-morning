@@ -187,5 +187,3 @@ inputPhone.addEventListener('keyup', setLinks);
 inputLinkedin.addEventListener('keyup', setLinks);
 inputGithub.addEventListener('keyup', setLinks);
 formButton.addEventListener('click', validation);
-
-console.log(formData);
