@@ -98,8 +98,8 @@ function validation(ev) {
 }
 
 //------------------PETICION AL SERVIDOR - FETCH---------------------
-const linkShare = document.querySelector('.js-textShare');
-const twitterButton = document.querySelector('.js-twitter');
+const linkShare = document.querySelector('.js-linkShare');
+const twitterURL = document.querySelector('.js-twitter');
 
 function sendRequest(formData) {
   fetch('https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card/', {
@@ -122,25 +122,19 @@ function sendRequest(formData) {
 
 function showURL(result) {
   if (result.success) {
+    linkShare.innerHTML = '<a target="_blank" href=' + result.cardURL + '>' + result.cardURL + '</a>';
     const tweet = 'Esta es nuestra Gryffincode Awesome Profile Cards';
-    linkShare.innerHTML =
-      '<a href=' +
-      result.cardURL +
-      ' tagert="_blank">' +
-      result.cardURL +
-      '</a>';
-    /* twitterButton.href = `http://twitter.com/share?text=${tweet}&hashtags=adalaber,promoJemison,profileCards&user_mentions=Adalab_Digital&url=${result.cardURL}` */
+    twitterURL.setAttribute(
+      'href',
+      `http://twitter.com/share?text=${tweet}&hashtags=adalaber,promoJemison,profileCards&user_mentions=Adalab_Digital&url=${result.cardURL}`
+    );
   } else {
     linkShare.innerHTML = 'ERROR:' + result.error;
   }
 }
 
 //----------------------BOTON TWITTER------------------------------
-/* function twitterShare(miURL) {
-  const twitterURL = document.querySelector('.js-twitter');
-  const tweet ='Esta es nuestra Gryffincode Awesome Profile Cards';
-  twitterURL.href = `http://twitter.com/share?text=`${tweet}`&hashtags=adalaber,promoJemison,profileCards&user_mentions=Adalab_Digital&url=${miURL}`;
-} */
+
 //---------------------LOCAL STORAGE--------------------------------------
 
 //Guardamos los datos en el localStorage
