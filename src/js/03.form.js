@@ -3,7 +3,7 @@
 /*--------------------Datos Formulario--------------- */
 
 //Objeto para crear los datos del formulario
-const formData = {
+let formData = {
   photo: '',
 };
 
@@ -67,6 +67,7 @@ function updateCard() {
 //Funcion que guarda los datos de la imagen en el objeto
 function setPhoto(photo) {
   formData.photo = photo;
+  localStorage.setItem('userInfo', JSON.stringify(formData));
   updateCard();
 }
 
@@ -146,8 +147,8 @@ document.addEventListener('keyup', function () {
 });
 
 //recuperar datos al refrescar
+const savedInfo = JSON.parse(localStorage.getItem('userInfo'));
 function uploadInfo() {
-  const savedInfo = JSON.parse(localStorage.getItem('userInfo'));
   if (savedInfo !== null) {
     formData.name = savedInfo.name;
     inputName.value = savedInfo.name;
@@ -173,7 +174,6 @@ function uploadInfo() {
     }
     updateCard();
   }
-  console.log(formData);
 }
 uploadInfo();
 

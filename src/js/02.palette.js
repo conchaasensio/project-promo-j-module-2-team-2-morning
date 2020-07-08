@@ -22,8 +22,10 @@ function addPaletteObject(ev) {
   const inputValue = ev.currentTarget.value;
 
   formData[name] = inputValue;
+  localStorage.setItem('userInfo', JSON.stringify(formData));
 }
 
 for (const palette of palettes) {
   palette.addEventListener('change', changePalette);
+  palette.addEventListener('click', addPaletteObject);
 }
