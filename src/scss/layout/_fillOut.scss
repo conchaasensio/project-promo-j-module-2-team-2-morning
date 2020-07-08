@@ -92,36 +92,47 @@ body {
 /* ESTILOS AÑADIR FOTO */
 .action {
   text-align: center;
+
+  .action__upload-btn {
+    background-color: $color-primary;
+    color: white;
+    border: $color-primary;
+    width: 140px;
+    height: 30px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 1s ease;
+    box-shadow: none;
+    outline: none;
+    &:hover {
+      font-weight: bold;
+      background-color: $color-p1-primary-dark;
+    }
+  }
+
+  .action__hiddenField {
+    /* Ocultamos el input de tipo "file" porque no podemos 
+    darle los estilos que queremos */
+    display: none;
+  }
 }
-.action__upload-btn {
-  background-color: $color-primary;
+/* .img-disabled {
+  background-color: rgb(184, 184, 184);
   color: white;
-  border: $color-primary;
+  border: inherit;
   width: 140px;
   height: 30px;
   border-radius: 3px;
-  cursor: pointer;
-  transition: background-color 1s ease;
-  box-shadow: none;
+  cursor: default;
   outline: none;
-  &:hover {
-    font-weight: bold;
-    background-color: $color-p1-primary-dark;
-  }
-}
-.action__hiddenField {
-  /* Ocultamos el input de tipo "file" porque no podemos 
-  darle los estilos que queremos */
-  display: none;
-}
+} */
 
 .profile {
   display: flex;
   justify-content: center;
-}
-
-.profile__preview {
-  width: 30px;
-  height: 30px;
-  margin-left: 20px;
+  .profile__preview {
+    width: 30px;
+    height: 30px;
+    margin-left: 20px;
+  }
 }

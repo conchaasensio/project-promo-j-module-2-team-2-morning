@@ -75,7 +75,9 @@
   border: inherit;
   text-align: center;
   margin-top: 20px;
-  cursor: pointer;
+  margin-bottom: 30px;
+  cursor: default;
+  outline: none;
 }
 
 .text__share {
@@ -100,6 +102,7 @@
     margin-bottom: 10px;
     word-wrap: break-word;
     word-break: break-all;
+    text-align: center;
   }
 
   &__button {
@@ -110,7 +113,7 @@
     border: inherit;
     font-size: 14px;
     text-align: center;
-    padding: 2px;
+    padding: 6px;
     border-radius: 3px;
     margin-bottom: 30px;
   }

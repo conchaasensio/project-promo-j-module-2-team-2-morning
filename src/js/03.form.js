@@ -26,6 +26,7 @@ const inputPhone = document.querySelector('.js-input-phone');
 const inputLinkedin = document.querySelector('.js-input-linkedin');
 const inputGithub = document.querySelector('.js-input-github');
 const formButton = document.querySelector('.js-share'); //Variable boton del form
+// const imgButton = document.querySelector('.js__profile-trigger'); //Variable boton del form
 const textShare = document.querySelector('.js-textShare'); //Variable del texto oculto de compartir
 
 //Funcion que guarda los datos en el objeto y lo pinta en la tarjeta el texto
@@ -61,7 +62,11 @@ function updateCard() {
   updateCardLinks('phone', 'tel:');
   updateCardLinks('linkedin', 'https://linkedin.com/in/');
   updateCardLinks('github', 'https://github.com/');
-  updateCardPhoto();
+  if (formData.photo !== '') {
+    updateCardPhoto();
+  } else {
+    profileImage.style.backgroundImage = `url(./assets/images/photo-card.jpg)`;
+  }
 }
 
 //Funcion que guarda los datos de la imagen en el objeto
@@ -91,6 +96,9 @@ function validation(ev) {
   ) {
     textShare.classList.remove('hidden');
     formButton.classList.add('disabled');
+    formButton.classList.remove('share__content__button');
+    // imgButton.classList.add('img-disabled');
+    // imgButton.classList.remove('action__upload-btn');
   } else {
     alert('No has introducido ningún dato');
   }
@@ -151,19 +159,20 @@ const savedInfo = JSON.parse(localStorage.getItem('userInfo'));
 function uploadInfo() {
   if (savedInfo !== null) {
     formData.name = savedInfo.name;
-    inputName.value = savedInfo.name;
+    inputName.value = savedInfo.name || '';
     formData.job = savedInfo.job;
-    inputJob.value = savedInfo.job;
+    inputJob.value = savedInfo.job || '';
     formData.email = savedInfo.email;
-    inputEmail.value = savedInfo.email;
+    inputEmail.value = savedInfo.email || '';
     formData.phone = savedInfo.phone;
-    inputPhone.value = savedInfo.phone;
+    inputPhone.value = savedInfo.phone || '';
     formData.linkedin = savedInfo.linkedin;
-    inputLinkedin.value = savedInfo.linkedin;
+    inputLinkedin.value = savedInfo.linkedin || '';
     formData.github = savedInfo.github;
-    inputGithub.value = savedInfo.github;
+    inputGithub.value = savedInfo.github || '';
     formData.photo = savedInfo.photo;
-    profileImage.style.backgroundImage = `url(${savedInfo.photo})`;
+    profileImage.style.backgroundImage =
+      `url(${savedInfo.photo})` || `url(./assets/images/photo-card.jpg)`;
     profilePreview.style.backgroundImage = `url(${savedInfo.photo})`;
 
     if (savedInfo.palette) {
