@@ -98,7 +98,8 @@ function validation(ev) {
 }
 
 //------------------PETICION AL SERVIDOR - FETCH---------------------
-const linkShare = document.querySelector('.js-linkShare');
+const linkShare = document.querySelector('.js-textShare');
+const twitterButton = document.querySelector('.js-twitter');
 
 function sendRequest(formData) {
   fetch('https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card/', {
@@ -121,13 +122,14 @@ function sendRequest(formData) {
 
 function showURL(result) {
   if (result.success) {
+    const tweet = 'Esta es nuestra Gryffincode Awesome Profile Cards';
     linkShare.innerHTML =
       '<a href=' +
       result.cardURL +
-      ' target="_blank">' +
+      ' tagert="_blank">' +
       result.cardURL +
       '</a>';
-    /* twitterShare(result.cardURL); */
+    /* twitterButton.href = `http://twitter.com/share?text=${tweet}&hashtags=adalaber,promoJemison,profileCards&user_mentions=Adalab_Digital&url=${result.cardURL}` */
   } else {
     linkShare.innerHTML = 'ERROR:' + result.error;
   }
