@@ -21,6 +21,9 @@ function reset(ev) {
   cardFields.linkedin.href = 'https://linkedin.com/in/';
   inputGithub.value = '';
   cardFields.github.href = 'https://github.com/';
+  profileImage.style.backgroundImage = `url(./assets/images/photo-card.jpg)`;
+  profilePreview.style.backgroundImage = ``;
+
   palettes[0].checked = true;
   paletteStyle.classList.add('palette1');
   paletteStyle.classList.remove('palette2');

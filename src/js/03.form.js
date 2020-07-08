@@ -169,10 +169,9 @@ function uploadInfo() {
       document.querySelector(
         '.js-check#color' + savedInfo.palette
       ).checked = true;
+      paletteStyle.classList.add(`palette${savedInfo.palette}`);
     }
     updateCard();
-  } else {
-    console.log('No hay datos en el localStorage');
   }
   console.log(formData);
 }
