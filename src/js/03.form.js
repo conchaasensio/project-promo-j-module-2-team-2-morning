@@ -136,7 +136,8 @@ function showURL(result) {
 //----------------------BOTON TWITTER------------------------------
 /* function twitterShare(miURL) {
   const twitterURL = document.querySelector('.js-twitter');
-  twitterURL.href = `http://twitter.com/share?text=Esta es nuestra Gryffincode Awesome Profile Cards🖥️&hashtags=adalaber,promoJemison,profileCards&user_mentions=Adalab_Digital&url=${miURL}`;
+  const tweet ='Esta es nuestra Gryffincode Awesome Profile Cards';
+  twitterURL.href = `http://twitter.com/share?text=`${tweet}`&hashtags=adalaber,promoJemison,profileCards&user_mentions=Adalab_Digital&url=${miURL}`;
 } */
 //---------------------LOCAL STORAGE--------------------------------------
 
