@@ -122,7 +122,12 @@ function sendRequest(formData) {
 
 function showURL(result) {
   if (result.success) {
-    linkShare.innerHTML = '<a target="_blank" href=' + result.cardURL + '>' + result.cardURL + '</a>';
+    linkShare.innerHTML =
+      '<a target="_blank" href=' +
+      result.cardURL +
+      '>' +
+      result.cardURL +
+      '</a>';
     const tweet = 'Esta es nuestra Gryffincode Awesome Profile Cards';
     twitterURL.setAttribute(
       'href',
@@ -132,8 +137,6 @@ function showURL(result) {
     linkShare.innerHTML = 'ERROR:' + result.error;
   }
 }
-
-//----------------------BOTON TWITTER------------------------------
 
 //---------------------LOCAL STORAGE--------------------------------------
 
@@ -185,3 +188,5 @@ inputPhone.addEventListener('keyup', setLinks);
 inputLinkedin.addEventListener('keyup', setLinks);
 inputGithub.addEventListener('keyup', setLinks);
 formButton.addEventListener('click', validation);
+
+console.log(formData);
