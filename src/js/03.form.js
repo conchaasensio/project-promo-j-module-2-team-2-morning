@@ -32,22 +32,12 @@ const textShare = document.querySelector('.js-textShare'); //Variable del texto 
 function setData(ev) {
   const name = ev.currentTarget.name;
   const inputValue = ev.currentTarget.value;
-
   formData[name] = inputValue;
-  cardFields[name].innerHTML = formData[name];
-
-  if (inputValue === formData.name) {
-    cardFields.name.innerHTML = formData.name;
-    if (inputValue === '') {
-      cardFields.name.innerHTML = 'Nombre Apellido';
-    }
-  } else if (inputValue === formData.job) {
-    cardFields.job.innerHTML = formData.job;
-    if (inputValue === '') {
-      cardFields.job.innerHTML = 'Front-end developer';
-    }
-  }
   updateCard();
+}
+
+function updateCardText(name, placeholder) {
+  cardFields[name].innerHTML = formData[name] || placeholder;
 }
 
 //Funcion que guarda los datos en el objeto
@@ -57,6 +47,7 @@ function setLinks(ev) {
   formData[name] = inputValue;
   updateCard();
 }
+
 //Funcion que imprime los datos en la tarjeta
 function updateCardLinks(name, prefix) {
   cardFields[name].href = prefix + formData[name];
@@ -64,12 +55,13 @@ function updateCardLinks(name, prefix) {
 
 //Funcion que actualiza los datos de la tarjeta
 function updateCard() {
+  updateCardText('name', 'Nombre Apellido');
+  updateCardText('job', 'Front-end developer');
   updateCardLinks('email', 'mailto:');
-  updateCardLinks('phone', 'tel');
+  updateCardLinks('phone', 'tel:');
   updateCardLinks('linkedin', 'https://linkedin.com/in/');
   updateCardLinks('github', 'https://github.com/');
   updateCardPhoto();
-  localStorage.setItem('userInfo', JSON.stringify(formData));
 }
 
 //Funcion que guarda los datos de la imagen en el objeto
@@ -130,12 +122,22 @@ function sendRequest(formData) {
 function showURL(result) {
   if (result.success) {
     linkShare.innerHTML =
-      '<a href=' + result.cardURL + '>' + result.cardURL + '</a>';
+      '<a href=' +
+      result.cardURL +
+      ' target="_blank">' +
+      result.cardURL +
+      '</a>';
+    /* twitterShare(result.cardURL); */
   } else {
     linkShare.innerHTML = 'ERROR:' + result.error;
   }
 }
 
+//----------------------BOTON TWITTER------------------------------
+/* function twitterShare(miURL) {
+  const twitterURL = document.querySelector('.js-twitter');
+  twitterURL.href = `http://twitter.com/share?text=Esta es nuestra Gryffincode Awesome Profile Cards🖥️&hashtags=adalaber,promoJemison,profileCards&user_mentions=Adalab_Digital&url=${miURL}`;
+} */
 //---------------------LOCAL STORAGE--------------------------------------
 
 //Guardamos los datos en el localStorage
@@ -147,18 +149,30 @@ document.addEventListener('keyup', function () {
 function uploadInfo() {
   const savedInfo = JSON.parse(localStorage.getItem('userInfo'));
   if (savedInfo !== null) {
+    formData.name = savedInfo.name;
     inputName.value = savedInfo.name;
+    formData.job = savedInfo.job;
     inputJob.value = savedInfo.job;
+    formData.email = savedInfo.email;
     inputEmail.value = savedInfo.email;
+    formData.phone = savedInfo.phone;
     inputPhone.value = savedInfo.phone;
+    formData.linkedin = savedInfo.linkedin;
     inputLinkedin.value = savedInfo.linkedin;
+    formData.github = savedInfo.github;
     inputGithub.value = savedInfo.github;
-    document.querySelector('.js-check:checked').value = savedInfo.palette;
-    profileImage.style.backgroundImage = `url(${savedInfo.photo})`;
-    profilePreview.style.backgroundImage = `url(${savedInfo.photo})`;
+    // profileImage.style.backgroundImage = `url(${savedInfo.photo})`;
+    // profilePreview.style.backgroundImage = `url(${savedInfo.photo})`;
+    if (savedInfo.palette) {
+      document.querySelector(
+        '.js-check#color' + savedInfo.palette
+      ).checked = true;
+    }
+    updateCard();
   } else {
     console.log('No hay datos en el localStorage');
   }
+  console.log(formData);
 }
 uploadInfo();
 
