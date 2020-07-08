@@ -162,8 +162,10 @@ function uploadInfo() {
     inputLinkedin.value = savedInfo.linkedin;
     formData.github = savedInfo.github;
     inputGithub.value = savedInfo.github;
-    // profileImage.style.backgroundImage = `url(${savedInfo.photo})`;
-    // profilePreview.style.backgroundImage = `url(${savedInfo.photo})`;
+    formData.photo = savedInfo.photo;
+    profileImage.style.backgroundImage = `url(${savedInfo.photo})`;
+    profilePreview.style.backgroundImage = `url(${savedInfo.photo})`;
+
     if (savedInfo.palette) {
       document.querySelector(
         '.js-check#color' + savedInfo.palette
