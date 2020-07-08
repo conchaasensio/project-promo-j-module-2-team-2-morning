@@ -12,19 +12,18 @@ function reset(ev) {
   formData = {
     photo: '',
   };
-  updateCard();
-  // inputName.value = '';
-  // cardFields.name.innerHTML = 'Nombre Apellido';
-  // inputJob.value = '';
-  // cardFields.job.innerHTML = 'Front-end developer';
-  // inputEmail.value = '';
-  // cardFields.email.href = 'mailto:';
-  // inputPhone.value = '';
-  // cardFields.phone.href = 'tel:';
-  // inputLinkedin.value = '';
-  // cardFields.linkedin.href = 'https://linkedin.com/in/';
-  // inputGithub.value = '';
-  // cardFields.github.href = 'https://github.com/';
+  inputName.value = '';
+  cardFields.name.innerHTML = 'Nombre Apellido';
+  inputJob.value = '';
+  cardFields.job.innerHTML = 'Front-end developer';
+  inputEmail.value = '';
+  cardFields.email.href = 'mailto:';
+  inputPhone.value = '';
+  cardFields.phone.href = 'tel:';
+  inputLinkedin.value = '';
+  cardFields.linkedin.href = 'https://linkedin.com/in/';
+  inputGithub.value = '';
+  cardFields.github.href = 'https://github.com/';
   profileImage.style.backgroundImage = `url(./assets/images/photo-card.jpg)`;
   profilePreview.style.backgroundImage = ``;
 
