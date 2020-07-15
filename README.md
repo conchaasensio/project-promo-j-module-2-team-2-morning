@@ -1,10 +1,8 @@
-![Gryffincode](./info-readme/Logo-Gryffincode.png)
-
 # Proyecto Grupal Módulo 2 de Adalab: Awsome profile cards
 
 ## Equipo
-<div class="pull-right"><img src="./info-readme/Logo-Gryffincode.png"/></div>
-Gryffincode
+
+Gryffincode<div class="pull-right"><img src="./info-readme/Logo-Gryffincode.png"/></div>
 
 ## Miembros
 
