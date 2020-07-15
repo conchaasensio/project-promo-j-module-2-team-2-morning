@@ -65,7 +65,7 @@ function updateCard() {
   if (formData.photo !== '') {
     updateCardPhoto();
   } else {
-    profileImage.style.backgroundImage = `url(./assets/images/photo-card.jpg)`;
+    profileImage.style.backgroundImage = `url(./assets/images/Logo-Gryffincode.png)`;
   }
 }
 
@@ -172,7 +172,7 @@ function uploadInfo() {
     inputGithub.value = savedInfo.github || '';
     formData.photo = savedInfo.photo;
     profileImage.style.backgroundImage =
-      `url(${savedInfo.photo})` || `url(./assets/images/photo-card.jpg)`;
+      `url(${savedInfo.photo})` || `url(./assets/images/Logo-Gryffincode.png)`;
     profilePreview.style.backgroundImage = `url(${savedInfo.photo})`;
 
     if (savedInfo.palette) {
