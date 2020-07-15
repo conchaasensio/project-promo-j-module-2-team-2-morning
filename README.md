@@ -7,8 +7,11 @@ Gryffincode
 ## Miembros
 
 Alexandra López
+
 Concha Asensio
+
 María José Plaza
+
 Mercedes Carballal
 
 ## En qué consiste
