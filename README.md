@@ -39,7 +39,7 @@ La aplicación funciona siguiendo estos pasos:
 - Permitir al usuario que, mediante la introducción de información en un formulario, este texto se muestre maquetado automáticamente en un cuadro similar a una tarjeta de visita, que será la muestra del resultado final
 - Permitir que el usuario pueda crear una web con su tarjeta y compartirla por Twitter
 
-[Pagina web](./info-readme/Pagina-web.PNG)
+![Pagina web](./info-readme/Pagina-web.PNG)
 
 La tarjeta de visita tiene los siguientes campos:
 
