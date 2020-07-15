@@ -18,6 +18,7 @@ const cardFields = {
   github: document.querySelector('.js-github'),
 };
 
+console.log(cardFields);
 //Variables con input del form
 const inputName = document.querySelector('.js-input-name');
 const inputJob = document.querySelector('.js-input-job');
@@ -197,4 +198,3 @@ inputLinkedin.addEventListener('keyup', setLinks);
 inputGithub.addEventListener('keyup', setLinks);
 formButton.addEventListener('click', validation);
 
-console.log(formData);

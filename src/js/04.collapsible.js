@@ -12,7 +12,6 @@ const collapsibleHidden1 = document.querySelector('.js-hidden1');
 const collapsibleHidden2 = document.querySelector('.js-hidden2');
 const collapsibleHidden3 = document.querySelector('.js-hidden3');
 
-console.log(arrowTransform3);
 
 function changeCollapsible1() {
   collapsibleHidden1.classList.toggle('hidden');
