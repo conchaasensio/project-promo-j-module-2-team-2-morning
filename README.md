@@ -1,8 +1,8 @@
 # Proyecto Grupal Módulo 2 de Adalab: Awsome profile cards
 
-## Equipo
+## Equipo Gryffincode
 
-Gryffincode<div class="pull-right"><img src="./info-readme/Logo-Gryffincode.png"/></div>
+<div class="pull-right"><img src="./info-readme/Logo-Gryffincode.png"/></div>
 
 ## Miembros
 
@@ -73,8 +73,5 @@ Respecto a la interacción con la web:
 
 ### Tecnologías empleadas
 
-Gulp
-JavaScript
-SASS
-Git (control de versiones, ramas)
+Gulp, JavaScript, SASS, Git (control de versiones, ramas)
 ![Gulp flow](./gulp-flow.png)
