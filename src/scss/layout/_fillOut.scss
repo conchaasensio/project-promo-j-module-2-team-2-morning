@@ -53,6 +53,7 @@ body {
   &__form {
     font-size: rem(14);
     width: 100%;
+    animation: growFillOut 0.7s ease forwards;
 
     .item {
       margin-bottom: 20px;
@@ -134,5 +135,21 @@ body {
     width: 30px;
     height: 30px;
     margin-left: 20px;
+  }
+}
+
+.js-hidden2 {
+  overflow: hidden;
+}
+
+@keyframes growFillOut {
+  from {
+    opacity: 0.7;
+    height: 0;
+  }
+
+  to {
+    opacity: 1;
+    height: 515px;
   }
 }

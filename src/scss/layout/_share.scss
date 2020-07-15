@@ -25,7 +25,7 @@
     align-items: center;
 
     & .icon {
-      color: #e17334;
+      color: $color-primary;
       font-size: 18px;
     }
 
@@ -42,11 +42,12 @@
 .share__content {
   display: flex;
   justify-content: center;
+  animation: growShare 0.7s ease forwards;
 
   &__button {
     width: 199px;
     height: 50px;
-    background-color: #e17334;
+    background-color: $color-primary;
     color: white;
     border-radius: 12px;
     border: inherit;
@@ -55,13 +56,13 @@
     margin-bottom: 30px;
     outline: none;
     cursor: pointer;
-    transition: background-color 0.8s ease;
+    transition: background-color 1s ease;
     box-shadow: none;
     outline: none;
     &:hover {
       font-weight: bold;
       font-size: 18px;
-      background-color: $color-p1-primary-dark;
+      background-color: #7c1313;
     }
   }
 }
@@ -121,4 +122,19 @@
 
 .hidden {
   display: none;
+}
+.js-hidden3 {
+  overflow: hidden;
+}
+
+@keyframes growShare {
+  from {
+    opacity: 0.7;
+    height: 0;
+  }
+
+  to {
+    opacity: 1;
+    height: 100px;
+  }
 }

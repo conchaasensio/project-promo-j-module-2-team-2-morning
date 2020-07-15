@@ -357,9 +357,10 @@ template {
 html {
   font-size: 16px;
   font-family: $font-primary;
+  scroll-behavior: auto;
 }
 
-.wrapper{
+.wrapper {
   max-width: $desktop;
   margin: auto;
 }
