@@ -58,12 +58,16 @@ Respecto a la interacción con la web:
 - Las modificaciones que hacemos en el formulario (diseño y contenido), aparecen automáticamente en la vista previa de la tarjeta
 - Las 3 partes del proceso de creación son elementos colapsables, que al hacer clic en el título se muestra/oculta mostrando sólo una sección a la vez
 - Toda la información del formulario se almacena en LocalStorage (almacenamiento local del navegador), de forma que al recargar la página sigue disponible y podemos borrarla con un botón de Reset. Para esto, definimos una estructura de datos compleja (con arrays y objetos) que es lo que guardamos en el navegador.
+
   ![Local Storage](./info-readme/LocalStorage.PNG)
+  
 - Para compartir en Twitter seguiremos 2 pasos:
   1. Al hacer clic en el botón de "Enviar" enviamos el formulario (submit) a un API que devolverá la URL de una web con la tarjeta de visita con la información rellena
+  
      ![Compartir Twitter](./info-readme/twitter.PNG)
   2. Mostraremos esta URL para que el usuario verifique si la tarjeta está bien definida y un botón de "Compartir" que enlazará a Twitter donde habrá un tweet con texto predefinido que incluye la URL de la tarjeta
-     ![Tarjeta generada](./info-readme/TarjetaGenerada.PNG)
+  
+     ![Tarjeta generada](./info-readme/TarjetaCreada.PNG)
 
 ### Tecnologías empleadas
 
