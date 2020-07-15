@@ -1,26 +1,25 @@
 .footer {
   border-top: 1px solid $color-line;
   width: 100%;
-  height: 110px;
+  // height: 110px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
   @include tablet {
-    height: 60px;
+    // height: 60px;
   }
+
   &__wrapper {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    max-width: $tablet;
     padding: 18px 61px 20px 61px;
     @include tablet {
       flex-direction: row;
-      justify-content: space-between;
       padding: 0;
     }
     @include desktop {
@@ -34,22 +33,20 @@
       color: $color-text-copy;
       margin-bottom: 12px;
       @include tablet {
-        margin-top: 18px;
         margin-left: 41px;
-        margin-bottom: 22px;
       }
     }
 
     &__logo {
-      width: 103px;
-      height: 40px;
+      width: 80px;
+
       @include tablet {
         margin-top: 10px;
         margin-right: 40px;
         margin-bottom: 10px;
       }
 
-      &--img {
+      &__img {
         width: 100%;
       }
     }
